@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import Founder from "@/components/Founder";
 import StatsSection from "@/components/stats/StatsSection";
 import FooterSection from "@/components/footer/FooterSection";
+import GlobeSection from "@/components/GlobeSection";
 
 const CRITERIA = [
   {
@@ -88,6 +89,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <GlobeSection />
 
       <section id="format" className="section section-light">
         <div className="wrap">
