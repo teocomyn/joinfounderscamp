@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "@/components/Reveal";
 import { CRITERIA, TESTIMONIALS } from "@/lib/content";
 
 type Answer = "yes" | "no" | null;
@@ -26,8 +27,8 @@ export default function SelectionSection() {
           </p>
         </div>
 
-        <div className="selection-grid">
-          <div className="criteria reveal-stagger">
+        <Reveal className="selection-grid reveal-stagger">
+          <div className="criteria">
             {CRITERIA.map((c) => (
               <div key={c.num} className="crit">
                 <span className="crit-num">{c.num}</span>
@@ -95,7 +96,7 @@ export default function SelectionSection() {
               ))}
             </div>
           </aside>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
