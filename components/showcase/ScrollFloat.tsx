@@ -28,7 +28,7 @@ export default function ScrollFloat({ children }: Props) {
     const chars = el.querySelectorAll<HTMLElement>(".char");
     const vh = () => window.innerHeight;
 
-    // Hidden on the hero — only appears once the user starts scrolling
+    // Hidden on the hero : only appears once the user starts scrolling
     const visibility = gsap.fromTo(
       root,
       { opacity: 0 },

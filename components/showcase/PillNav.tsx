@@ -54,7 +54,7 @@ export default function PillNav() {
         <button
           className="sc-header-logo"
           onClick={() => onItemClick("home")}
-          aria-label="The Founders Camp — Accueil"
+          aria-label="The Founders Camp · Accueil"
         >
           <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true">
             <defs>

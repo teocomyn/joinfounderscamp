@@ -13,7 +13,7 @@ export default function Hero() {
             2 semaines · 8 fondateurs · 10k€+/mois · {SITE.sessionShort}
           </p>
           <p className="hero-sub">
-            Le camp que tu aurais dû rejoindre il y a 2 ans — deep work, sport et
+            Le camp que tu aurais dû rejoindre il y a 2 ans : deep work, sport et
             aventure depuis les plus beaux spots du monde, entouré de gens plus
             forts que toi.
           </p>

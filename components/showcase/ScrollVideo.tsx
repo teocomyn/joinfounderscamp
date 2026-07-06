@@ -42,7 +42,7 @@ export default function ScrollVideo({ src, className = "" }: Props) {
     video.addEventListener("loadeddata", onLoadedData);
     video.addEventListener("error", onError);
 
-    // Never block the page — dismiss loader after 4s max
+    // Never block the page : dismiss loader after 4s max
     const timeout = window.setTimeout(markReady, 4000);
 
     const setup = async () => {

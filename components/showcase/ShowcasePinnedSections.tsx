@@ -53,7 +53,7 @@ const DESTINATIONS = [
 const CRITERIA = [
   "Tu génères au moins 10 000€ de CA mensuel avec ton activité.",
   "Tu peux travailler 100% en remote pendant 2 à 3 semaines.",
-  "Tu donnes autant que tu prends — leviers, réseau, expérience.",
+  "Tu donnes autant que tu prends : leviers, réseau, expérience.",
   "Tu es facile à vivre. L'état d'esprit compte autant que les chiffres.",
 ];
 

@@ -37,7 +37,7 @@ export default function GlowHorizonSection() {
           </span>
 
           <p className="glow-horizon-lead">
-            Le camp de base privé des fondateurs à 10k€+/mois — deep work, sport et
+            Le camp de base privé des fondateurs à 10k€+/mois : deep work, sport et
             aventure depuis Lisbonne, Gozo et Bali.
           </p>
 

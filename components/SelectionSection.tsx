@@ -61,7 +61,7 @@ export default function SelectionSection() {
                 <div className={`qualifier-result${matches ? " qualifier-result--match" : ""}`}>
                   {matches ? (
                     <>
-                      <strong>Tu matches.</strong> Continue ta candidature — on a hâte de te lire.
+                      <strong>Tu matches.</strong> Continue ta candidature, on a hâte de te lire.
                       <a href="#candidature" className="btn btn-nav qualifier-cta">
                         Candidater maintenant
                         <span className="btn-arrow" aria-hidden="true">→</span>

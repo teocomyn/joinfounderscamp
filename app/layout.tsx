@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "The Founders Camp — Session Lisbonne 2027",
+        alt: "The Founders Camp · Session Lisbonne 2027",
       },
     ],
   },

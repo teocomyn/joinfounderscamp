@@ -28,10 +28,10 @@ export default function GlobeSection() {
       <div className="wrap section-globe-inner">
         <div className="globe-intro">
           <span className="pill-label pill-label--light">Carte mondiale</span>
-          <h2>THE FOUNDERS CAMP — partout où tu dois être.</h2>
+          <h2>THE FOUNDERS CAMP · partout où tu dois être.</h2>
           <p>
             Work. Escape. Tribe. depuis Lisbonne, Gozo ou Bali. Fais pivoter le
-            globe — chaque spot est testé : fibre, cadre, groupe calibré 8–10
+            globe : chaque spot est testé : fibre, cadre, groupe calibré 8–10
             fondateurs.
           </p>
         </div>

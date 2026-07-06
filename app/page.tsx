@@ -25,7 +25,7 @@ export default function Home() {
               il y a 2 ans.
             </h2>
             <p>
-              Work · Escape · Tribe — une journée structurée, répétée chaque jour.
+              Work · Escape · Tribe : une journée structurée, répétée chaque jour.
               Assez de cadre pour produire, assez de liberté pour respirer.
             </p>
           </Reveal>

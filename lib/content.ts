@@ -38,7 +38,7 @@ export const PILLARS = [
     label: "Escape",
     time: "14:30",
     title: "Aventure l'après-midi",
-    text: "Surf, rando, plongée — on coupe pour mieux revenir.",
+    text: "Surf, rando, plongée, on coupe pour mieux revenir.",
     hint: "Optionnel au départ. Personne ne le rate au bout de 3 jours.",
   },
   {
@@ -97,7 +97,7 @@ export const CRITERIA = [
   },
   {
     num: "03",
-    text: "Tu donnes autant que tu prends — leviers, réseau, expérience.",
+    text: "Tu donnes autant que tu prends : leviers, réseau, expérience.",
   },
   {
     num: "04",
@@ -116,7 +116,7 @@ export const FAQ = [
   },
   {
     q: "Je dois rester toute la durée du camp ?",
-    a: "Oui. Le groupe vit ensemble du premier au dernier jour — c'est ce qui crée la dynamique.",
+    a: "Oui. Le groupe vit ensemble du premier au dernier jour. C'est ce qui crée la dynamique.",
   },
   {
     q: "La connexion internet est vraiment fiable ?",

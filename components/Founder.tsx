@@ -18,12 +18,12 @@ export default function Founder() {
         <p>
           The Founders Camp est né d&apos;une frustration simple : les meilleures idées
           et les meilleurs deals naissent quand des fondateurs performants se retrouvent
-          dans le bon environnement — pas dans un cowork bruyant ou un retreat sans
+          dans le bon environnement, pas dans un cowork bruyant ou un retreat sans
           structure.
         </p>
         <p>
           Chaque session est construite à la main : villa testée, fibre vérifiée,
-          groupe calibré. On ne vend pas du rêve — on assemble les conditions pour que
+          groupe calibré. On ne vend pas du rêve : on assemble les conditions pour que
           tu avances plus vite.
         </p>
         <a

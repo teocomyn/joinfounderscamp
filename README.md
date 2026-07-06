@@ -1,4 +1,4 @@
-# The Founders Camp — joinfounderscamp.com
+# The Founders Camp · joinfounderscamp.com
 
 Landing page de candidature. Next.js 14 (App Router) + TypeScript. Zéro dépendance UI, tout en CSS natif.
 
@@ -40,7 +40,7 @@ Tant que la variable est vide, le formulaire affiche la confirmation sans rien e
 
 ## Palette
 
-- Pin `#12291F` / `#0C1D16` — fond
-- Sable `#EAE3D2` — texte
-- Cuivre `#C56A3E` / `#D98A5F` — accent (remplace l'ancien jaune)
-- Sauge `#7E9184` — labels secondaires
+- Pin `#12291F` / `#0C1D16` : fond
+- Sable `#EAE3D2` : texte
+- Cuivre `#C56A3E` / `#D98A5F` : accent (remplace l'ancien jaune)
+- Sauge `#7E9184` : labels secondaires
