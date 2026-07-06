@@ -1,22 +1,26 @@
 export default function Nav() {
   return (
     <nav className="site-nav">
-      <div className="wrap nav-bar">
+      <div className="nav-shell wrap">
         <a href="#" className="logo">
-          <svg className="logo-flag" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <svg className="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
             <circle cx="20" cy="20" r="20" fill="#C56A3E" />
-            <path d="M20 9 L28 30 H12 Z" fill="#EAE3D2" opacity="0.95" />
+            <path d="M20 9 L28 30 H12 Z" fill="#F4F1EA" opacity="0.95" />
           </svg>
-          <span>Founders Camp</span>
+          <span className="logo-text">Founders Camp</span>
         </a>
-        <div className="nav-links">
+
+        <div className="nav-pill">
           <a href="#concept">Concept</a>
           <a href="#destinations">Destinations</a>
+          <a href="#format">Format</a>
           <a href="#criteres">Sélection</a>
-          <a href="#candidature" className="btn btn-nav">
-            Candidater
-          </a>
         </div>
+
+        <a href="#candidature" className="btn btn-nav">
+          Candidater
+          <span className="btn-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </nav>
   );
