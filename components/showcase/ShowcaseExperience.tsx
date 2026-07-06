@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import ScrollVideo from "@/components/showcase/ScrollVideo";
 import ClubXHero from "@/components/showcase/ClubXHero";
-import ScrollFloat from "@/components/showcase/ScrollFloat";
 import PillNav from "@/components/showcase/PillNav";
 import ShowcasePinnedSections from "@/components/showcase/ShowcasePinnedSections";
 import GlassPanel from "@/components/showcase/GlassPanel";
@@ -28,7 +27,6 @@ export default function ShowcaseExperience() {
       <ScrollVideo src={VIDEO_SRC} />
 
       <ClubXHero />
-      <ScrollFloat>{"WORK\nESCAPE\nTRIBE"}</ScrollFloat>
       <PillNav />
 
       <div id="scroll-driver" className="sc-scroll-driver">
