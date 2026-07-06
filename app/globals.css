@@ -1440,177 +1440,131 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   white-space: nowrap;
 }
 
-/* ---------- STATS SECTION (cinematic) ---------- */
-.stats-section {
-  position: relative;
-  background: #0a0a0a;
-  color: #fff;
-  padding: 32px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  font-family: "Barlow", "Instrument Sans", system-ui, sans-serif;
+/* ---------- STATS SECTION ---------- */
+.section-stats {
+  background: var(--cream);
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
 }
 
-.stats-section-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.45;
+.stats-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
 }
 
-.stats-section-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(10, 10, 10, 0.92) 0%,
-    rgba(10, 10, 10, 0.75) 45%,
-    rgba(12, 29, 22, 0.85) 100%
-  );
+.stats-showcase-copy h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--pine-deep);
+  margin-bottom: 16px;
+  max-width: 18ch;
 }
 
-.stats-section-inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+.stats-showcase-copy h2 .accent {
+  color: var(--copper);
 }
 
-.stats-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  align-items: stretch;
+.stats-showcase-lead {
+  color: var(--text-muted);
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.65;
+  max-width: 42ch;
+  margin-bottom: 32px;
 }
 
-.stats-copy {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
-.stats-eyebrow {
-  display: inline-flex;
-  align-self: flex-start;
+.stats-card {
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line-light);
+  box-shadow: var(--shadow-soft);
+}
+
+.stats-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--pine-deep);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stats-card span {
   font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  margin-bottom: 24px;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
-.stats-heading {
-  font-family: "Barlow", sans-serif;
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  max-width: 590px;
+.stats-card:nth-child(5) {
+  grid-column: 1 / -1;
 }
 
-.stats-heading-accent {
-  font-family: "Instrument Serif", serif;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.stats-lead {
-  font-size: clamp(15px, 1.5vw, 18px);
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.4);
-  line-height: 1.65;
-  max-width: 36rem;
-  margin-bottom: 48px;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, max-content));
-  gap: 32px 48px;
-  margin-bottom: 40px;
-}
-
-.stats-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.stats-num {
-  font-family: "Instrument Serif", serif;
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
-  letter-spacing: -0.02em;
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-.stats-num--text {
-  display: block;
-}
-
-.stats-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  max-width: 16ch;
-}
-
-.stats-cta {
-  align-self: flex-start;
-}
-
-.stats-visual-wrap {
+.stats-showcase-visual {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
 
-.stats-video-mask {
+.stats-video-frame {
+  position: relative;
   width: 100%;
-  max-width: 500px;
-  aspect-ratio: 1;
-  transform-origin: center center;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line-light);
+  box-shadow: var(--shadow-card);
+  background: var(--pine-deep);
 }
 
-.stats-video {
+.stats-video-frame-el {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  .stats-section { padding: 96px 48px; }
-  .stats-grid { gap: 32px 64px; }
+.stats-video-frame-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 29, 22, 0.4) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-@media (min-width: 1024px) {
-  .stats-section { padding: 96px 120px; }
-  .stats-layout {
-    flex-direction: row;
-    gap: 160px;
-    align-items: center;
+@media (max-width: 960px) {
+  .stats-showcase {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  .stats-visual-wrap {
-    width: 50%;
-    justify-content: flex-end;
-  }
-  .stats-video-mask {
+
+  .stats-showcase-copy h2 {
     max-width: none;
-    width: 120%;
   }
-  .stats-grid { gap: 32px 96px; }
+
+  .stats-video-frame {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card:nth-child(5) {
+    grid-column: auto;
+  }
 }
 
 /* ---------- GLOBE SECTION (shadcn GlobeDemo · Founders Camp) ---------- */
