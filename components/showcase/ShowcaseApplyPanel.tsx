@@ -74,7 +74,7 @@ export default function ShowcaseApplyPanel() {
                 matche, on t&apos;appelle pour un échange rapide avant de valider ta place.
               </p>
               <div className="sc-apply-note">
-                <strong>14 places max.</strong> Premier arrivé, premier étudié. Chaque
+                <strong>8 à 10 places max.</strong> Premier arrivé, premier étudié. Chaque
                 session est examinée à la main.
               </div>
             </div>

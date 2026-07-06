@@ -18,7 +18,7 @@ const AVATARS: { initials: string; from: string; to: string }[] = [
 ];
 
 const STATS = [
-  { num: "14", label: "Places par session" },
+  { num: "8–10", label: "Places par session" },
   { num: "5k€+", label: "CA minimum requis" },
   { num: "3", label: "Destinations 2026" },
   { num: "100%", label: "Entrepreneurs vérifiés" },

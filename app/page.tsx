@@ -186,8 +186,8 @@ export default function Home() {
                 valider ta place.
               </p>
               <div className="apply-note">
-                <strong>Places limitées.</strong> Chaque session accueille 10 à
-                14 membres maximum pour garder la qualité des échanges.
+                <strong>Places limitées.</strong> Chaque session accueille 8 à
+                10 membres maximum pour garder la qualité des échanges.
               </div>
             </Reveal>
             <Reveal>

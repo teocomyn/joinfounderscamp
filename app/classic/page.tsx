@@ -167,7 +167,7 @@ export default function ClassicPage() {
                 5 minutes pour candidater. On revient vers toi sous 72h.
               </p>
               <div className="apply-note">
-                <strong>Places limitées.</strong> 10 à 14 membres maximum par session.
+                <strong>Places limitées.</strong> 8 à 10 membres maximum par session.
               </div>
             </Reveal>
             <Reveal>

@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <div className="hero-meta">
           <div>
-            <strong>14</strong>
+            <strong>8–10</strong>
             <span>places par session</span>
           </div>
           <div>
