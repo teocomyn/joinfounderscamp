@@ -1,6 +1,6 @@
 "use client";
 
-import Reveal from "@/components/Reveal";
+import { MapPin } from "lucide-react";
 import { Globe } from "@/components/ui/globe";
 
 const DESTINATIONS = [
@@ -9,33 +9,42 @@ const DESTINATIONS = [
   { name: "Bali", detail: "Session 03 · À annoncer", open: false },
 ];
 
+export function GlobeDemo() {
+  return (
+    <div className="globe-demo">
+      <div className="globe-demo-brand" aria-hidden="true">
+        <span className="globe-demo-brand-the">THE FOUNDERS</span>
+        <span className="globe-demo-title">Camp</span>
+      </div>
+      <Globe className="globe-demo-globe" />
+      <div className="globe-demo-radial" aria-hidden="true" />
+    </div>
+  );
+}
+
 export default function GlobeSection() {
   return (
     <section id="globe" className="section section-globe">
-      <div className="wrap">
-        <Reveal className="sec-head sec-head--center globe-sec-head">
+      <div className="wrap section-globe-inner">
+        <div className="globe-intro">
           <span className="pill-label pill-label--light">Carte mondiale</span>
-          <h2>Un camp. Trois continents. Zéro compromis.</h2>
+          <h2>THE FOUNDERS CAMP — partout où tu dois être.</h2>
           <p>
-            Fais pivoter le globe — Lisbonne, Gozo et Bali t&apos;attendent.
-            Chaque spot est testé : fibre, cadre, terrain de jeu.
+            Work. Escape. Tribe. depuis Lisbonne, Gozo ou Bali. Fais pivoter le
+            globe — chaque spot est testé : fibre, cadre, groupe calibré 8–10
+            fondateurs.
           </p>
-        </Reveal>
+        </div>
 
-        <Reveal>
-          <div className="globe-demo">
-            <span className="globe-demo-title" aria-hidden="true">
-              World
-            </span>
-            <Globe className="globe-demo-globe" />
-            <div className="globe-demo-radial" aria-hidden="true" />
-          </div>
-        </Reveal>
+        <GlobeDemo />
 
         <div className="globe-dest-row">
           {DESTINATIONS.map((d) => (
-            <div key={d.name} className={`globe-dest-pill${d.open ? " globe-dest-pill--open" : ""}`}>
-              <span className="globe-dest-dot" aria-hidden="true" />
+            <div
+              key={d.name}
+              className={`globe-dest-pill${d.open ? " globe-dest-pill--open" : ""}`}
+            >
+              <MapPin className="globe-dest-icon" strokeWidth={2} aria-hidden="true" />
               <div>
                 <strong>{d.name}</strong>
                 <span>{d.detail}</span>
@@ -45,11 +54,11 @@ export default function GlobeSection() {
         </div>
 
         <div className="globe-demo-cta">
-          <a href="#candidature" className="btn btn-light">
-            Candidater pour Lisbonne
+          <a href="#candidature" className="btn btn-dark">
+            Déposer ma candidature
             <span className="btn-arrow" aria-hidden="true">→</span>
           </a>
-          <p className="globe-hint">Glisse ou fais pivoter le globe</p>
+          <p className="globe-hint">Glisse pour explorer · Session 01 · Lisbonne 2027</p>
         </div>
       </div>
     </section>

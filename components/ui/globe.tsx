@@ -8,19 +8,27 @@ import { cn } from "@/lib/utils";
 export const FOUNDERS_CAMP_GLOBE_CONFIG: Omit<COBEOptions, "width" | "height"> = {
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.3,
+  theta: 0.28,
   dark: 0,
-  diffuse: 0.4,
+  diffuse: 0.45,
   mapSamples: 16000,
-  mapBrightness: 1.2,
-  baseColor: [0.96, 0.95, 0.92],
+  mapBrightness: 1.25,
+  baseColor: [1, 1, 1],
   markerColor: [197 / 255, 106 / 255, 62 / 255],
-  glowColor: [0.12, 0.18, 0.15],
+  glowColor: [0.94, 0.93, 0.91],
+  markerElevation: 0.025,
   markers: [
-    { location: [38.7223, -9.1393], size: 0.09 },
-    { location: [36.0443, 14.2512], size: 0.07 },
-    { location: [-8.3405, 115.092], size: 0.07 },
+    { location: [38.7223, -9.1393], size: 0.1 },
+    { location: [36.0443, 14.2512], size: 0.08 },
+    { location: [-8.3405, 115.092], size: 0.08 },
   ],
+  arcs: [
+    { from: [38.7223, -9.1393], to: [36.0443, 14.2512] },
+    { from: [36.0443, 14.2512], to: [-8.3405, 115.092] },
+  ],
+  arcColor: [197 / 255, 106 / 255, 62 / 255],
+  arcWidth: 0.35,
+  arcHeight: 0.22,
 };
 
 type GlobeProps = {
