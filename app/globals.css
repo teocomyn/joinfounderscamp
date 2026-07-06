@@ -1494,6 +1494,201 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   }
 }
 
+/* ---------- GLOW HORIZON (shadcn demo · Founders Camp) ---------- */
+.section-glow-horizon {
+  position: relative;
+  min-height: min(100dvh, 860px);
+  background: #050507;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow-horizon-root {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.glow-horizon-arc {
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+}
+
+.glow-horizon-demo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.glow-horizon-demo-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 28px 200px;
+  z-index: 2;
+}
+
+.glow-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.glow-title-the {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(0.65rem, 2vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 8px;
+}
+
+.glow-title-camp {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 18vw, 9rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(197, 106, 62, 0.55) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.glow-title-tag {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.glow-title-tag span {
+  color: var(--copper-soft);
+}
+
+.glow-horizon-overlay {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: min(100dvh, 860px);
+  pointer-events: none;
+}
+
+.glow-horizon-meta {
+  pointer-events: auto;
+  text-align: center;
+  max-width: 560px;
+  padding-bottom: clamp(48px, 8vh, 88px);
+}
+
+.glow-horizon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper-soft);
+  background: rgba(197, 106, 62, 0.12);
+  border: 1px solid rgba(217, 138, 95, 0.28);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 18px;
+}
+
+.glow-horizon-pill-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--copper-soft);
+}
+
+.glow-horizon-lead {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.glow-horizon-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.glow-horizon-btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.glow-horizon-link {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s;
+}
+
+.glow-horizon-link:hover {
+  color: var(--copper-soft);
+}
+
+.glow-horizon-scrim {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 100%,
+    rgba(12, 29, 22, 0.55) 0%,
+    transparent 70%
+  );
+}
+
+@media (max-width: 640px) {
+  .glow-horizon-demo-content {
+    padding-top: 140px;
+    padding-bottom: 240px;
+  }
+
+  .glow-horizon-meta {
+    padding-bottom: 40px;
+  }
+
+  .glow-horizon-actions .btn-lg {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ---------- FOOTER STAGE (video + glass) ---------- */
 .footer-stage {
   position: relative;

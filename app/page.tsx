@@ -9,6 +9,7 @@ import Founder from "@/components/Founder";
 import StatsSection from "@/components/stats/StatsSection";
 import FooterSection from "@/components/footer/FooterSection";
 import GlobeSection from "@/components/GlobeSection";
+import GlowHorizonSection from "@/components/GlowHorizonSection";
 
 const CRITERIA = [
   {
@@ -91,6 +92,8 @@ export default function Home() {
       </section>
 
       <GlobeSection />
+
+      <GlowHorizonSection />
 
       <section id="format" className="section section-light">
         <div className="wrap">
