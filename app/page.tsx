@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import Pillars from "@/components/Pillars";
 import DestinationsCarousel from "@/components/DestinationsCarousel";
+import GlobeSection from "@/components/GlobeSection";
 import StatsSection from "@/components/stats/StatsSection";
 import SelectionSection from "@/components/SelectionSection";
 import ApplySection from "@/components/ApplySection";
@@ -47,6 +48,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <GlobeSection />
 
       <StatsSection />
 

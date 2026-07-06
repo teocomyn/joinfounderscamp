@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { DESTINATIONS } from "@/lib/content";
 
 export default function Destinations() {
@@ -10,13 +9,7 @@ export default function Destinations() {
           className={`dest${d.open ? " dest--open" : ""}${d.featured ? " dest--featured" : ""}`}
         >
           <div className="dest-media">
-            <Image
-              src={d.image}
-              alt={d.alt}
-              fill
-              sizes="(max-width: 900px) 100vw, 33vw"
-              className="dest-img"
-            />
+            <img src={d.image} alt={d.alt} className="dest-img" loading="lazy" />
             <div className="dest-media-scrim" aria-hidden="true" />
             <span className={`tag${d.open ? " open" : ""}`}>{d.tag}</span>
           </div>
