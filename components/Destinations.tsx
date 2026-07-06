@@ -4,7 +4,7 @@ const DESTINATIONS = [
   {
     name: "Lisbonne, Portugal",
     coords: "38.7223° N · 9.1393° W",
-    when: "Session 01 · Été 2026 · 2 semaines",
+    when: "Session 01 · Été 2027 · 2 semaines",
     tag: "Candidatures ouvertes",
     open: true,
     image:

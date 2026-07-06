@@ -98,7 +98,7 @@ export default function Home() {
             <div className="crit">
               <span className="check">✓</span>
               <p>
-                <strong>Tu génères au moins 5 000€ de CA mensuel</strong> avec ton activité.
+                <strong>Tu génères au moins 10 000€ de CA mensuel</strong> avec ton activité.
               </p>
             </div>
             <div className="crit">
@@ -160,7 +160,7 @@ export default function Home() {
               </p>
             </details>
             <details>
-              <summary>Je fais moins de 5k€/mois, je peux candidater ?</summary>
+              <summary>Je fais moins de 10k€/mois, je peux candidater ?</summary>
               <p>
                 Si tu es en forte croissance, candidate quand même et explique ta trajectoire.
               </p>
@@ -195,7 +195,7 @@ export default function Home() {
             <span className="foot-label">Contact</span>
             <a href="mailto:hello@joinfounderscamp.com">hello@joinfounderscamp.com</a>
           </div>
-          <span className="foot-copy">© 2026 · joinfounderscamp.com</span>
+          <span className="foot-copy">© 2027 · joinfounderscamp.com</span>
         </div>
       </footer>
     </>

@@ -87,7 +87,6 @@ export default function ApplyForm() {
             <option value="" disabled>
               Choisir
             </option>
-            <option>5 000€ à 10 000€</option>
             <option>10 000€ à 25 000€</option>
             <option>25 000€ à 50 000€</option>
             <option>Plus de 50 000€</option>

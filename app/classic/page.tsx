@@ -125,7 +125,7 @@ export default function ClassicPage() {
             <div className="crit">
               <span className="check">✓</span>
               <p>
-                <strong>Tu génères au moins 5 000€ de CA mensuel</strong> avec
+                <strong>Tu génères au moins 10 000€ de CA mensuel</strong> avec
                 ton activité.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function ClassicPage() {
               <p>Le montant exact est communiqué lors de l&apos;appel de sélection.</p>
             </details>
             <details>
-              <summary>Je fais moins de 5k€/mois, je peux candidater ?</summary>
+              <summary>Je fais moins de 10k€/mois, je peux candidater ?</summary>
               <p>Si tu es en forte croissance, candidate quand même.</p>
             </details>
           </Reveal>
@@ -208,7 +208,7 @@ export default function ClassicPage() {
             <a href="#candidature">Candidater</a>
             <a href="mailto:hello@joinfounderscamp.com">Contact</a>
           </div>
-          <span className="mono">© 2026 · joinfounderscamp.com</span>
+          <span className="mono">© 2027 · joinfounderscamp.com</span>
         </div>
       </footer>
     </>

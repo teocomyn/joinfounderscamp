@@ -31,7 +31,7 @@ const DESTINATIONS = [
     status: "Ouvert",
     coords: "38.7223° N · 9.1393° W",
     name: "Lisbonne",
-    detail: "Session 01 · Été 2026 · 2 semaines",
+    detail: "Session 01 · Été 2027 · 2 semaines",
     open: true,
   },
   {
@@ -51,7 +51,7 @@ const DESTINATIONS = [
 ];
 
 const CRITERIA = [
-  "Tu génères au moins 5 000€ de CA mensuel avec ton activité.",
+  "Tu génères au moins 10 000€ de CA mensuel avec ton activité.",
   "Tu peux travailler 100% en remote pendant 2 à 3 semaines.",
   "Tu donnes autant que tu prends — leviers, réseau, expérience.",
   "Tu es facile à vivre. L'état d'esprit compte autant que les chiffres.",

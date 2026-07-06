@@ -3,8 +3,8 @@ const VIDEO_SRC =
 
 const STATS = [
   { value: "8–10", label: "Places par session" },
-  { value: "5k€+", label: "CA minimum requis" },
-  { value: "3", label: "Destinations 2026" },
+  { value: "10k€+", label: "CA minimum requis" },
+  { value: "3", label: "Destinations 2027" },
   { value: "100%", label: "Entrepreneurs vérifiés" },
 ];
 
@@ -14,7 +14,7 @@ export default function Hero() {
       <header className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="pill-label">Session 01 · Été 2026 · Sur candidature</span>
+            <span className="pill-label">Session 01 · Été 2027 · Sur candidature</span>
             <h1>
               Work. Escape. <span className="accent">Tribe.</span>
             </h1>

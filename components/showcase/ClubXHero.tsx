@@ -19,8 +19,8 @@ const AVATARS: { initials: string; from: string; to: string }[] = [
 
 const STATS = [
   { num: "8–10", label: "Places par session" },
-  { num: "5k€+", label: "CA minimum requis" },
-  { num: "3", label: "Destinations 2026" },
+  { num: "10k€+", label: "CA minimum requis" },
+  { num: "3", label: "Destinations 2027" },
   { num: "100%", label: "Entrepreneurs vérifiés" },
 ];
 
@@ -81,7 +81,7 @@ export default function ClubXHero() {
               ))}
             </div>
             <span className="cx-badge-text">
-              Session 01 · Été 2026 · Candidatures ouvertes
+              Session 01 · Été 2027 · Candidatures ouvertes
             </span>
           </div>
 
