@@ -5,9 +5,7 @@ import { useEffect, useState } from "react";
 const LINKS = [
   { href: "#concept", label: "Concept" },
   { href: "#destinations", label: "Destinations" },
-  { href: "#format", label: "Format" },
   { href: "#criteres", label: "Sélection" },
-  { href: "#temoignages", label: "Témoignages" },
 ];
 
 export default function Nav() {
@@ -65,9 +63,7 @@ export default function Nav() {
             </button>
             <a href="#candidature" className="btn btn-nav">
               Candidater
-              <span className="btn-arrow" aria-hidden="true">
-                →
-              </span>
+              <span className="btn-arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -93,9 +89,7 @@ export default function Nav() {
           ))}
           <a href="#candidature" className="btn btn-dark nav-overlay-cta" onClick={closeMenu}>
             Déposer ma candidature
-            <span className="btn-arrow" aria-hidden="true">
-              →
-            </span>
+            <span className="btn-arrow" aria-hidden="true">→</span>
           </a>
         </nav>
       </div>

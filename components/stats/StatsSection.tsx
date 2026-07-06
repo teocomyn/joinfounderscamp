@@ -116,11 +116,6 @@ export default function StatsSection() {
                 <span className="stats-label">Réponse candidature</span>
               </motion.div>
             </motion.div>
-
-            <a href="#candidature" className="btn btn-light stats-cta">
-              Rejoindre la Session 01
-              <span className="btn-arrow" aria-hidden="true">→</span>
-            </a>
           </motion.div>
 
           <div className="stats-visual-wrap">

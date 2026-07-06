@@ -1,24 +1,22 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Tent } from "lucide-react";
 import FitnessButton from "@/components/footer/FitnessButton";
-
-const FOOTER_VIDEO =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_111347_9cf2a2b0-2c10-475b-a132-147a046b4927.mp4";
+import { FOOTER_VIDEO, FOUNDER, SITE } from "@/lib/content";
 
 const NAV_LINKS = [
   { label: "Concept", href: "#concept" },
   { label: "Destinations", href: "#destinations" },
-  { label: "Le format", href: "#format" },
-  { label: "Nous contacter", href: "mailto:hello@joinfounderscamp.com" },
+  { label: "Sélection", href: "#criteres" },
+  { label: "Contact", href: `mailto:${SITE.email}` },
 ];
 
 const CONNECT_LINKS = [
   { label: "Candidater", href: "#candidature" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Instagram", href: "https://instagram.com", external: true },
-  { label: "LinkedIn", href: "https://linkedin.com", external: true },
+  { label: "Instagram", href: SITE.instagram, external: true },
+  { label: "LinkedIn", href: SITE.linkedin, external: true },
 ];
 
 export default function FooterSection() {
@@ -44,6 +42,31 @@ export default function FooterSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
+          <div className="footer-founder">
+            <div className="footer-founder-media">
+              <Image
+                src={FOUNDER.image}
+                alt={FOUNDER.name}
+                fill
+                sizes="80px"
+                className="footer-founder-img"
+              />
+            </div>
+            <div className="footer-founder-copy">
+              <strong>{FOUNDER.name}</strong>
+              <span>{FOUNDER.title}</span>
+              <p>{FOUNDER.bio}</p>
+              <a
+                href={FOUNDER.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-founder-link"
+              >
+                LinkedIn →
+              </a>
+            </div>
+          </div>
+
           <div className="footer-grid">
             <div className="footer-logo-cell">
               <Tent className="footer-logo-icon" strokeWidth={2.5} aria-hidden="true" />
