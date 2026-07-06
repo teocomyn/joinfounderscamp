@@ -103,11 +103,14 @@ export default function ApplyForm() {
         </label>
         <textarea id="motivation" name="motivation" required></textarea>
       </div>
-      <button type="submit" className="btn" style={{ width: "100%" }} disabled={loading}>
-        {loading ? "Envoi..." : "Envoyer ma candidature"}
+      <p className="form-meta">
+        <span aria-hidden="true">⏱</span> Environ 5 minutes · Réponse sous 72h
+      </p>
+      <button type="submit" className="btn btn-submit" disabled={loading}>
+        {loading ? "Envoi en cours…" : "Envoyer ma candidature"}
       </button>
       <p className="form-foot">
-        Tes infos restent entre nous. Aucune candidature n&apos;est partagée,
+        Tes infos restent confidentielles. Aucune candidature n&apos;est partagée,
         même refusée.
       </p>
     </form>

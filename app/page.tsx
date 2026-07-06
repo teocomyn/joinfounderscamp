@@ -2,8 +2,46 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import ApplyForm from "@/components/ApplyForm";
-import Destinations from "@/components/Destinations";
+import DestinationsCarousel from "@/components/DestinationsCarousel";
 import Pillars from "@/components/Pillars";
+import Testimonials from "@/components/Testimonials";
+import Founder from "@/components/Founder";
+import Image from "next/image";
+
+const CRITERIA = [
+  {
+    num: "01",
+    text: (
+      <>
+        <strong>Tu génères au moins 10 000€ de CA mensuel</strong> avec ton activité.
+      </>
+    ),
+  },
+  {
+    num: "02",
+    text: (
+      <>
+        <strong>Tu peux travailler 100% en remote</strong> pendant 2 à 3 semaines.
+      </>
+    ),
+  },
+  {
+    num: "03",
+    text: (
+      <>
+        <strong>Tu donnes autant que tu prends.</strong> Leviers, réseau, expérience.
+      </>
+    ),
+  },
+  {
+    num: "04",
+    text: (
+      <>
+        <strong>Tu es facile à vivre.</strong> L&apos;état d&apos;esprit compte autant que les chiffres.
+      </>
+    ),
+  },
+];
 
 export default function Home() {
   return (
@@ -27,8 +65,32 @@ export default function Home() {
               ne l&apos;aurait fait seul.
             </p>
           </Reveal>
-          <Reveal>
+          <Reveal className="reveal-stagger">
             <Pillars />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="full-bleed" aria-label="Collaborer avec des fondateurs">
+        <Image
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
+          alt=""
+          fill
+          sizes="100vw"
+          className="full-bleed-img"
+          priority={false}
+        />
+        <div className="full-bleed-scrim" aria-hidden="true" />
+        <div className="wrap full-bleed-content">
+          <Reveal>
+            <span className="pill-label pill-label--light">La tribu</span>
+            <h2 className="full-bleed-title">
+              Collabore et apprends auprès de fondateurs qui performent déjà.
+            </h2>
+            <a href="#candidature" className="btn btn-dark">
+              Rejoindre la Session 01
+              <span className="btn-arrow" aria-hidden="true">→</span>
+            </a>
           </Reveal>
         </div>
       </section>
@@ -45,7 +107,7 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal>
-            <Destinations />
+            <DestinationsCarousel />
           </Reveal>
         </div>
       </section>
@@ -63,27 +125,60 @@ export default function Home() {
             </Reveal>
             <Reveal className="timeline">
               <div className="slot">
-                <span className="slot-time">07:30</span>
-                <h3>Sport ou surf au lever du soleil</h3>
-                <p>Optionnel, mais personne ne le rate.</p>
+                <span className="slot-icon" aria-hidden="true">☀</span>
+                <div>
+                  <span className="slot-time">07:30</span>
+                  <h3>Sport ou surf au lever du soleil</h3>
+                  <p>Optionnel, mais personne ne le rate.</p>
+                </div>
               </div>
               <div className="slot">
-                <span className="slot-time">09:00 · 13:00</span>
-                <h3>Deep work</h3>
-                <p>Bloc de focus collectif. Téléphones en mode avion.</p>
+                <span className="slot-icon" aria-hidden="true">◻</span>
+                <div>
+                  <span className="slot-time">09:00 · 13:00</span>
+                  <h3>Deep work</h3>
+                  <p>Bloc de focus collectif. Téléphones en mode avion.</p>
+                </div>
               </div>
               <div className="slot">
-                <span className="slot-time">14:30</span>
-                <h3>Aventure</h3>
-                <p>Exploration, rando, plage, sortie locale.</p>
+                <span className="slot-icon" aria-hidden="true">△</span>
+                <div>
+                  <span className="slot-time">14:30</span>
+                  <h3>Aventure</h3>
+                  <p>Exploration, rando, plage, sortie locale.</p>
+                </div>
               </div>
               <div className="slot">
-                <span className="slot-time">19:30</span>
-                <h3>Dîner + mastermind</h3>
-                <p>Chaque soir, un membre ouvre son business au groupe.</p>
+                <span className="slot-icon" aria-hidden="true">◉</span>
+                <div>
+                  <span className="slot-time">19:30</span>
+                  <h3>Dîner + mastermind</h3>
+                  <p>Chaque soir, un membre ouvre son business au groupe.</p>
+                </div>
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section id="temoignages" className="section section-light section-testimonials">
+        <div className="wrap">
+          <Reveal className="sec-head sec-head--center">
+            <span className="pill-label">Témoignages</span>
+            <h2>Ce qu&apos;en disent les fondateurs.</h2>
+            <p>Retours de sessions passées — profils vérifiés, chiffres réels.</p>
+          </Reveal>
+          <Reveal className="reveal-stagger">
+            <Testimonials />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section-founder">
+        <div className="wrap">
+          <Reveal>
+            <Founder />
+          </Reveal>
         </div>
       </section>
 
@@ -94,32 +189,28 @@ export default function Home() {
             <h2>On ne recrute pas des touristes.</h2>
             <p>Chaque candidature est examinée à la main. Voici ce qu&apos;on regarde.</p>
           </Reveal>
-          <Reveal className="criteria">
-            <div className="crit">
-              <span className="check">✓</span>
-              <p>
-                <strong>Tu génères au moins 10 000€ de CA mensuel</strong> avec ton activité.
-              </p>
-            </div>
-            <div className="crit">
-              <span className="check">✓</span>
-              <p>
-                <strong>Tu peux travailler 100% en remote</strong> pendant 2 à 3 semaines.
-              </p>
-            </div>
-            <div className="crit">
-              <span className="check">✓</span>
-              <p>
-                <strong>Tu donnes autant que tu prends.</strong> Leviers, réseau, expérience.
-              </p>
-            </div>
-            <div className="crit">
-              <span className="check">✓</span>
-              <p>
-                <strong>Tu es facile à vivre.</strong> L&apos;état d&apos;esprit compte autant que les chiffres.
-              </p>
-            </div>
+          <Reveal className="criteria reveal-stagger">
+            {CRITERIA.map((c) => (
+              <div key={c.num} className="crit">
+                <span className="crit-num">{c.num}</span>
+                <p>{c.text}</p>
+              </div>
+            ))}
           </Reveal>
+        </div>
+      </section>
+
+      <section className="cta-band" aria-label="Candidater">
+        <div className="wrap cta-band-inner">
+          <div>
+            <span className="pill-label pill-label--light">Session 01 · Été 2027</span>
+            <h2>Rejoins la prochaine session.</h2>
+            <p>Places limitées · 8 à 10 fondateurs · Candidature en 5 minutes.</p>
+          </div>
+          <a href="#candidature" className="btn btn-dark btn-lg">
+            Déposer ma candidature
+            <span className="btn-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </section>
 
@@ -184,15 +275,25 @@ export default function Home() {
           <div className="foot-brand-block">
             <div className="foot-brand">THE FOUNDERS CAMP</div>
             <p className="foot-tagline">Work hard. From anywhere.</p>
+            <div className="foot-social">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                Instagram
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                LinkedIn
+              </a>
+            </div>
           </div>
           <div className="foot-col">
             <span className="foot-label">Navigation</span>
             <a href="#concept">Concept</a>
             <a href="#destinations">Destinations</a>
+            <a href="#format">Format</a>
             <a href="#candidature">Candidater</a>
           </div>
           <div className="foot-col">
-            <span className="foot-label">Contact</span>
+            <span className="foot-label">Légal</span>
+            <a href="#faq">FAQ</a>
             <a href="mailto:hello@joinfounderscamp.com">hello@joinfounderscamp.com</a>
           </div>
           <span className="foot-copy">© 2027 · joinfounderscamp.com</span>
