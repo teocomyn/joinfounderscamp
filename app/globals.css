@@ -1,4 +1,5 @@
 :root {
+  --font-geist: var(--font-geist-sans), "Instrument Sans", system-ui, sans-serif;
   --pine: #12291f;
   --pine-deep: #0c1d16;
   --pine-soft: #1a3529;
@@ -1283,6 +1284,210 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
     width: 120%;
   }
   .stats-grid { gap: 32px 96px; }
+}
+
+/* ---------- FOOTER STAGE (video + glass) ---------- */
+.footer-stage {
+  position: relative;
+  min-height: min(100dvh, 720px);
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-stage-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.footer-stage-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
+.footer-stage-inner {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 16px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-glass {
+  font-family: var(--font-geist);
+  -webkit-font-smoothing: antialiased;
+  background: rgba(255, 255, 240, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 32px;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 32px;
+  align-items: start;
+}
+
+.footer-logo-cell {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-icon {
+  width: 32px;
+  height: 32px;
+  color: #060606;
+}
+
+.footer-heading {
+  font-size: clamp(1.35rem, 3vw, 1.875rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #060606;
+  line-height: 1.15;
+  align-self: center;
+}
+
+.footer-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-menu-label {
+  font-weight: 500;
+  color: #060606;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 11px;
+}
+
+.footer-menu-link {
+  color: rgba(6, 6, 6, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.footer-menu-link:hover { color: #060606; }
+
+.footer-legal {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  color: rgba(6, 6, 6, 0.4);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* FitnessButton */
+.fitness-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--font-geist);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.fitness-btn--compact {
+  padding: 8px 20px !important;
+  gap: 8px !important;
+  font-size: 12px !important;
+}
+
+.fitness-btn-icon {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.fitness-btn--primary {
+  background: #060606;
+  color: #fff;
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.25),
+    0 4px 12px rgba(255, 255, 255, 0.25);
+}
+.fitness-btn--primary:hover {
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.35),
+    0 8px 24px rgba(255, 255, 255, 0.35);
+}
+
+.fitness-btn--secondary {
+  background: #f5f5f5;
+  color: #060606;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.fitness-btn--secondary:hover {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .footer-stage-inner { padding: 32px 24px 32px; }
+  .footer-glass { padding: 32px 48px; }
+  .footer-legal { margin-top: 32px; }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 64px;
+    row-gap: 24px;
+  }
+  .footer-logo-cell { grid-column: 1; grid-row: 1; }
+  .footer-heading { grid-column: 2; grid-row: 1; align-self: center; }
+  .footer-actions { grid-column: 1 / 3; grid-row: 2; }
+  .footer-menu:nth-of-type(1) {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: end;
+  }
+  .footer-menu:nth-of-type(2) {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    align-self: end;
+  }
 }
 
 /* ---------- REVEAL ---------- */

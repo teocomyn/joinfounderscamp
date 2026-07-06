@@ -7,6 +7,7 @@ import Pillars from "@/components/Pillars";
 import Testimonials from "@/components/Testimonials";
 import Founder from "@/components/Founder";
 import StatsSection from "@/components/stats/StatsSection";
+import FooterSection from "@/components/footer/FooterSection";
 
 const CRITERIA = [
   {
@@ -246,35 +247,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="wrap foot-grid">
-          <div className="foot-brand-block">
-            <div className="foot-brand">THE FOUNDERS CAMP</div>
-            <p className="foot-tagline">Work hard. From anywhere.</p>
-            <div className="foot-social">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                Instagram
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <div className="foot-col">
-            <span className="foot-label">Navigation</span>
-            <a href="#concept">Concept</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#format">Format</a>
-            <a href="#candidature">Candidater</a>
-          </div>
-          <div className="foot-col">
-            <span className="foot-label">Légal</span>
-            <a href="#faq">FAQ</a>
-            <a href="mailto:hello@joinfounderscamp.com">hello@joinfounderscamp.com</a>
-          </div>
-          <span className="foot-copy">© 2027 · joinfounderscamp.com</span>
-        </div>
-      </footer>
+      <FooterSection />
     </>
   );
 }
