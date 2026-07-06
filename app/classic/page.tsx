@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import ApplyForm from "@/components/ApplyForm";
+import Destinations from "@/components/Destinations";
 
 export default function ClassicPage() {
   return (
@@ -70,25 +71,8 @@ export default function ClassicPage() {
               jeu.
             </p>
           </Reveal>
-          <Reveal className="dests">
-            <div className="dest">
-              <span className="tag open">Candidatures ouvertes</span>
-              <span className="mono coords">38.7223° N · 9.1393° W</span>
-              <h3>Lisbonne, Portugal</h3>
-              <p className="when">Session 01 · Été 2026 · 2 semaines</p>
-            </div>
-            <div className="dest">
-              <span className="tag">Bientôt</span>
-              <span className="mono coords">36.0443° N · 14.2512° E</span>
-              <h3>Gozo, Malte</h3>
-              <p className="when">Session 02 · 2027 · 3 semaines</p>
-            </div>
-            <div className="dest">
-              <span className="tag">Bientôt</span>
-              <span className="mono coords">8.6500° S · 115.2167° E</span>
-              <h3>Bali, Indonésie</h3>
-              <p className="when">Session 03 · À annoncer</p>
-            </div>
+          <Reveal>
+            <Destinations />
           </Reveal>
         </div>
       </section>
