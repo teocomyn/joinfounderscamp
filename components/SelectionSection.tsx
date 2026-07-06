@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Reveal from "@/components/Reveal";
-import { CRITERIA, TESTIMONIALS } from "@/lib/content";
+import { CRITERIA } from "@/lib/content";
 
 type Answer = "yes" | "no" | null;
 
@@ -22,8 +22,8 @@ export default function SelectionSection() {
           <span className="pill-label pill-label--light">Sélection</span>
           <h2>On ne recrute pas des touristes.</h2>
           <p>
-            Chaque candidature est examinée à la main. Voici ce qu&apos;on regarde —
-            et ce que disent ceux qui y étaient.
+            Chaque candidature est examinée à la main. Voici ce qu&apos;on regarde
+            avant de te répondre sous 72h.
           </p>
         </div>
 
@@ -77,23 +77,6 @@ export default function SelectionSection() {
                   )}
                 </div>
               )}
-            </div>
-
-            <div className="selection-testimonials">
-              {TESTIMONIALS.map((t) => (
-                <blockquote key={t.name} className="testimonial-card testimonial-card--compact">
-                  <p className="testimonial-quote">&ldquo;{t.quote}&rdquo;</p>
-                  <footer className="testimonial-author">
-                    <span className="testimonial-avatar" aria-hidden="true">
-                      {t.initials}
-                    </span>
-                    <span>
-                      <strong>{t.name}</strong>
-                      <span className="testimonial-role">{t.role}</span>
-                    </span>
-                  </footer>
-                </blockquote>
-              ))}
             </div>
           </aside>
         </Reveal>

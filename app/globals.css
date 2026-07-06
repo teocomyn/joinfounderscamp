@@ -1005,21 +1005,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--copper-soft);
 }
 
-.selection-testimonials {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.testimonial-card--compact {
-  padding: 22px 24px;
-}
-
-.testimonial-card--compact .testimonial-quote {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
 /* ---------- APPLY ---------- */
 .apply-shell {
   display: grid;

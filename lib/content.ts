@@ -105,23 +105,6 @@ export const CRITERIA = [
   },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "Deux semaines où j'ai avancé plus vite que deux mois seul. Le groupe tire vers le haut — et les soirées mastermind valent le prix à elles seules.",
-    name: "Julien M.",
-    role: "Agence Shopify · ~22k€/mois",
-    initials: "JM",
-  },
-  {
-    quote:
-      "Pas un retreat Instagram. Du vrai travail, des vrais entrepreneurs, zéro posture. Exactement ce que je cherchais.",
-    name: "Thomas R.",
-    role: "SaaS founder · ~35k€/mois",
-    initials: "TR",
-  },
-] as const;
-
 export const FAQ = [
   {
     q: "Combien ça coûte ?",
