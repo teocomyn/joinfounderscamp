@@ -6,7 +6,7 @@ import DestinationsCarousel from "@/components/DestinationsCarousel";
 import Pillars from "@/components/Pillars";
 import Testimonials from "@/components/Testimonials";
 import Founder from "@/components/Founder";
-import Image from "next/image";
+import StatsSection from "@/components/stats/StatsSection";
 
 const CRITERIA = [
   {
@@ -69,29 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="full-bleed" aria-label="Collaborer avec des fondateurs">
-        <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
-          alt=""
-          fill
-          sizes="100vw"
-          className="full-bleed-img"
-          priority={false}
-        />
-        <div className="full-bleed-scrim" aria-hidden="true" />
-        <div className="wrap full-bleed-content">
-          <Reveal>
-            <span className="pill-label pill-label--light">La tribu</span>
-            <h2 className="full-bleed-title">
-              Collabore et apprends auprès de fondateurs qui performent déjà.
-            </h2>
-            <a href="#candidature" className="btn btn-dark">
-              Rejoindre la Session 01
-              <span className="btn-arrow" aria-hidden="true">→</span>
-            </a>
-          </Reveal>
-        </div>
-      </section>
+      <StatsSection />
 
       <section id="destinations" className="section section-dark">
         <div className="wrap">
