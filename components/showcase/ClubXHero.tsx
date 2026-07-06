@@ -26,67 +26,36 @@ const STATS = [
 
 export default function ClubXHero() {
   const overlayRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const overlay = overlayRef.current;
-    const content = contentRef.current;
-    const stats = statsRef.current;
-    if (!overlay || !content || !stats) return;
+    if (!overlay) return;
 
-    const vh = () => window.innerHeight;
+    gsap.set(overlay, { opacity: 1, y: 0 });
 
-    // Main overlay fades out quickly once user scrolls
-    const overlayFade = gsap.to(overlay, {
-      opacity: 0,
-      y: -32,
-      ease: "none",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: () => `+=${vh() * 0.55}`,
-        scrub: true,
-        onUpdate: (self) => {
-          overlay.style.pointerEvents = self.progress > 0.2 ? "none" : "auto";
+    const anim = gsap.fromTo(
+      overlay,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: -40,
+        ease: "none",
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: "#scroll-driver",
+          start: "top top",
+          end: () => `+=${window.innerHeight * 0.85}`,
+          scrub: 0.6,
+          onUpdate: (self) => {
+            overlay.style.pointerEvents = self.progress > 0.45 ? "none" : "auto";
+          },
         },
-      },
-    });
-
-    // Hero copy disappears first — avoids any overlap with scroll sections
-    const contentFade = gsap.to(content, {
-      opacity: 0,
-      y: -24,
-      scale: 0.98,
-      ease: "none",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top top",
-        end: () => `+=${vh() * 0.28}`,
-        scrub: true,
-      },
-    });
-
-    // Stats linger slightly then fade with overlay
-    const statsFade = gsap.to(stats, {
-      opacity: 0,
-      y: 20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: () => `top top-=${vh() * 0.12}`,
-        end: () => `+=${vh() * 0.38}`,
-        scrub: true,
-      },
-    });
+      }
+    );
 
     return () => {
-      overlayFade.scrollTrigger?.kill();
-      overlayFade.kill();
-      contentFade.scrollTrigger?.kill();
-      contentFade.kill();
-      statsFade.scrollTrigger?.kill();
-      statsFade.kill();
+      anim.scrollTrigger?.kill();
+      anim.kill();
     };
   }, []);
 
@@ -96,7 +65,7 @@ export default function ClubXHero() {
       <div className="cx-scrim-vignette" aria-hidden="true" />
 
       <div className="cx-hero">
-        <div ref={contentRef} className="cx-hero-content">
+        <div className="cx-hero-content">
           <div className="cx-badge animate-fade-rise">
             <div className="cx-avatars">
               {AVATARS.map((a) => (
@@ -143,7 +112,7 @@ export default function ClubXHero() {
         </div>
       </div>
 
-      <div ref={statsRef} className="cx-stats-wrap animate-fade-rise-delay-3">
+      <div className="cx-stats-wrap animate-fade-rise-delay-3">
         <div className="cx-stats">
           {STATS.map((s, i) => (
             <div key={s.label} className="cx-stat">

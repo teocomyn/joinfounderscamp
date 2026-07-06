@@ -67,31 +67,35 @@ function useBeatFade(
     const el = ref.current;
     if (!el) return;
 
+    const apply = (scrollY: number) => {
+      const y = scrollY / window.innerHeight;
+      let opacity = 0;
+      let yOffset = 28;
+
+      if (y >= startVh && y <= endVh) {
+        if (y < peakVh) {
+          const t = (y - startVh) / (peakVh - startVh);
+          opacity = t;
+          yOffset = 28 * (1 - t);
+        } else {
+          const t = (y - peakVh) / (endVh - peakVh);
+          opacity = 1 - t;
+          yOffset = -20 * t;
+        }
+      }
+
+      el.style.opacity = String(opacity);
+      el.style.transform = `translateY(${yOffset}px)`;
+      el.style.pointerEvents = opacity > 0.35 ? "auto" : "none";
+    };
+
+    apply(window.scrollY);
+
     const st = ScrollTrigger.create({
-      trigger: document.documentElement,
+      trigger: "#scroll-driver",
       start: "top top",
       end: "bottom bottom",
-      onUpdate: (self) => {
-        const y = self.scroll() / window.innerHeight;
-        let opacity = 0;
-        let yOffset = 32;
-
-        if (y >= startVh && y <= endVh) {
-          if (y < peakVh) {
-            const t = (y - startVh) / (peakVh - startVh);
-            opacity = t;
-            yOffset = 32 * (1 - t);
-          } else {
-            const t = (y - peakVh) / (endVh - peakVh);
-            opacity = 1 - t;
-            yOffset = -24 * t;
-          }
-        }
-
-        el.style.opacity = String(opacity);
-        el.style.transform = `translateY(${yOffset}px)`;
-        el.style.pointerEvents = opacity > 0.35 ? "auto" : "none";
-      },
+      onUpdate: (self) => apply(self.scroll()),
     });
 
     return () => st.kill();
@@ -103,9 +107,9 @@ export default function ShowcasePinnedSections() {
   const destRef = useRef<HTMLElement>(null);
   const selectRef = useRef<HTMLElement>(null);
 
-  useBeatFade(conceptRef, 1.2, 1.8, 2.6);
-  useBeatFade(destRef, 2.8, 3.4, 4.2);
-  useBeatFade(selectRef, 4.4, 5.0, 5.8);
+  useBeatFade(conceptRef, 1.0, 1.6, 2.4);
+  useBeatFade(destRef, 2.6, 3.2, 4.0);
+  useBeatFade(selectRef, 4.2, 4.8, 5.6);
 
   return (
     <>
