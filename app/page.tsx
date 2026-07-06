@@ -49,7 +49,7 @@ export default function Home() {
       <Nav />
       <Hero />
 
-      <section id="concept" className="section section-light">
+      <section id="concept" className="section section-bento">
         <div className="wrap">
           <Reveal className="sec-head sec-head--center">
             <span className="pill-label">Le concept</span>
