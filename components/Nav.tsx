@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import BrandLogo from "@/components/BrandLogo";
 
 const LINKS = [
   { href: "#concept", label: "Concept" },
@@ -35,11 +36,7 @@ export default function Nav() {
       <nav className={`site-nav${scrolled ? " site-nav--scrolled" : ""}`}>
         <div className="nav-shell wrap">
           <a href="#" className="logo" onClick={closeMenu}>
-            <svg className="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <circle cx="20" cy="20" r="20" fill="#C56A3E" />
-              <path d="M20 9 L28 30 H12 Z" fill="#F4F1EA" opacity="0.95" />
-            </svg>
-            <span className="logo-text">Founders Camp</span>
+            <BrandLogo className="logo-img" priority />
           </a>
 
           <div className="nav-pill">
@@ -82,6 +79,7 @@ export default function Nav() {
           ×
         </button>
         <nav className="nav-overlay-nav" aria-label="Navigation mobile">
+          <BrandLogo className="nav-overlay-logo" priority />
           {LINKS.map((l) => (
             <a key={l.href} href={l.href} onClick={closeMenu}>
               {l.label}

@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 import { Globe } from "@/components/ui/globe";
 
 const DESTINATIONS = [
@@ -12,9 +13,8 @@ const DESTINATIONS = [
 export function GlobeDemo() {
   return (
     <div className="globe-demo">
-      <div className="globe-demo-brand" aria-hidden="true">
-        <span className="globe-demo-brand-the">THE FOUNDERS</span>
-        <span className="globe-demo-title">Camp</span>
+      <div className="globe-demo-brand">
+        <BrandLogo className="globe-demo-logo" />
       </div>
       <Globe className="globe-demo-globe" />
       <div className="globe-demo-radial" aria-hidden="true" />

@@ -18,6 +18,7 @@ export const IMAGES = {
   bentoBg:
     "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80",
   founder: "/founder-teo.png",
+  logo: "/logo-founders-camp.png",
   lisbon:
     "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=1200&q=80",
   gozo:

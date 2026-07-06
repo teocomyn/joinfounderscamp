@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Tent } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 import FitnessButton from "@/components/footer/FitnessButton";
 import { FOOTER_VIDEO, FOUNDER, SITE } from "@/lib/content";
 
@@ -69,7 +69,7 @@ export default function FooterSection() {
 
           <div className="footer-grid">
             <div className="footer-logo-cell">
-              <Tent className="footer-logo-icon" strokeWidth={2.5} aria-hidden="true" />
+              <BrandLogo className="footer-brand-logo" />
             </div>
 
             <h2 className="footer-heading">Work. Escape. Tribe.</h2>
