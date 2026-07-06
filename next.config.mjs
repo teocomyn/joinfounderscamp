@@ -8,6 +8,8 @@ const nextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
+    // Évite les 404 de /_next/image en prod Vercel — URLs Unsplash servies directement
+    unoptimized: true,
   },
 };
 

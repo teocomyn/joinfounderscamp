@@ -611,7 +611,18 @@ a { color: inherit; text-decoration: none; }
 .dest--open { border-color: rgba(197, 106, 62, 0.35); }
 
 .dest-media { position: relative; height: 280px; overflow: hidden; }
-.dest-img { object-fit: cover; transition: transform 0.5s; }
+.dest-media > span {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.dest-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
 .dest:hover .dest-img { transform: scale(1.06); }
 .dest-media-scrim {
   position: absolute;
@@ -1015,8 +1026,13 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   min-height: 420px;
   height: 100%;
 }
-
-.founder-img { object-fit: cover; }
+.founder-media > span {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.founder-img { object-fit: cover; width: 100%; height: 100%; }
 
 .founder-copy {
   padding: 48px 48px 48px 0;

@@ -31,7 +31,7 @@ const DESTINATIONS = [
     tag: "Bientôt",
     open: false,
     image:
-      "https://images.unsplash.com/photo-1537996194471-cc057b964117?w=1200&q=80",
+      "https://images.unsplash.com/photo-1537996194471-cc057b964117?auto=format&fit=crop&w=1200&q=80",
     alt: "Rizières en terrasses à Bali",
   },
 ];
