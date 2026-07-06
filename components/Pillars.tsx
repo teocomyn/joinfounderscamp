@@ -1,3 +1,8 @@
+import Image from "next/image";
+
+const BENTO_BG =
+  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=80";
+
 const PILLARS = [
   {
     label: "Work",
@@ -39,6 +44,13 @@ const PILLARS = [
 export default function Pillars() {
   return (
     <div className="bento-stage">
+      <Image
+        src={BENTO_BG}
+        alt=""
+        fill
+        sizes="(max-width: 1180px) 100vw, 1180px"
+        className="bento-stage-bg"
+      />
       <div className="bento-stage-scrim" aria-hidden="true" />
       <div className="bento-grid">
         {PILLARS.map((p) => (

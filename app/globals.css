@@ -408,19 +408,27 @@ a { color: inherit; text-decoration: none; }
   padding-bottom: 100px;
 }
 
+.section-bento .sec-head {
+  margin-bottom: 40px;
+}
+
 .bento-stage {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 40px);
-  background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1800&q=80");
-  background-size: cover;
-  background-position: center;
+  min-height: 400px;
+}
+
+.bento-stage-bg {
+  object-fit: cover;
+  z-index: 0;
 }
 
 .bento-stage-scrim {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     160deg,
     rgba(244, 241, 234, 0.55) 0%,
@@ -432,7 +440,7 @@ a { color: inherit; text-decoration: none; }
 
 .bento-grid {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
@@ -1102,28 +1110,24 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 }
 .reveal.in { opacity: 1; transform: none; }
 
-.reveal-stagger.in .bento-card,
+.reveal-stagger.in > *,
 .reveal-stagger.in .testimonial-card,
 .reveal-stagger.in .crit {
   animation: reveal-stagger 0.65s ease forwards;
 }
 .reveal-stagger.in > *:nth-child(1),
-.reveal-stagger.in .bento-card:nth-child(1),
 .reveal-stagger.in .testimonial-card:nth-child(1),
 .reveal-stagger.in .crit:nth-child(1) { animation-delay: 0ms; }
 .reveal-stagger.in > *:nth-child(2),
-.reveal-stagger.in .bento-card:nth-child(2),
 .reveal-stagger.in .testimonial-card:nth-child(2),
 .reveal-stagger.in .crit:nth-child(2) { animation-delay: 80ms; }
 .reveal-stagger.in > *:nth-child(3),
-.reveal-stagger.in .bento-card:nth-child(3),
 .reveal-stagger.in .testimonial-card:nth-child(3),
 .reveal-stagger.in .crit:nth-child(3) { animation-delay: 160ms; }
 .reveal-stagger.in > *:nth-child(4),
 .reveal-stagger.in .crit:nth-child(4) { animation-delay: 240ms; }
 
 .reveal-stagger > *,
-.reveal-stagger .bento-card,
 .reveal-stagger .testimonial-card,
 .reveal-stagger .crit {
   opacity: 0;
@@ -1137,7 +1141,6 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .reveal-stagger > *,
-  .reveal-stagger .bento-card,
   .reveal-stagger .testimonial-card,
   .reveal-stagger .crit { opacity: 1; transform: none; animation: none !important; }
   html { scroll-behavior: auto; }

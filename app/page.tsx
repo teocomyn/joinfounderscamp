@@ -65,9 +65,7 @@ export default function Home() {
               ne l&apos;aurait fait seul.
             </p>
           </Reveal>
-          <Reveal className="reveal-stagger">
-            <Pillars />
-          </Reveal>
+          <Pillars />
         </div>
       </section>
 
