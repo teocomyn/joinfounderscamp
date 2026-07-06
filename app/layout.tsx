@@ -3,7 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 const OG_IMAGE =
-  "https://images.unsplash.com/photo-1555881400-74d7aca8bbbf?auto=format&fit=crop&w=1200&h=630&q=80";
+  "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=1200&h=630&q=80";
 
 export const metadata: Metadata = {
   title: "The Founders Camp · Workations privées pour entrepreneurs",

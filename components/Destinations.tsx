@@ -8,8 +8,8 @@ const DESTINATIONS = [
     tag: "Candidatures ouvertes",
     open: true,
     image:
-      "https://images.unsplash.com/photo-1555881400-74d7aca8bbbf?auto=format&fit=crop&w=1200&q=80",
-    alt: "Tramway jaune à Lisbonne au coucher du soleil",
+      "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=1200&q=80",
+    alt: "Tramway jaune à Lisbonne dans une rue pavée",
   },
   {
     name: "Gozo, Malte",
@@ -18,8 +18,8 @@ const DESTINATIONS = [
     tag: "Bientôt",
     open: false,
     image:
-      "https://images.unsplash.com/photo-1528329543622-d894a1127951?auto=format&fit=crop&w=1200&q=80",
-    alt: "Falaises et mer turquoise à Gozo, Malte",
+      "https://images.unsplash.com/photo-1668647184912-67da07256e3e?auto=format&fit=crop&w=1200&q=80",
+    alt: "Vue sur la mer et les falaises depuis Gozo, Malte",
   },
   {
     name: "Bali, Indonésie",
@@ -28,8 +28,8 @@ const DESTINATIONS = [
     tag: "Bientôt",
     open: false,
     image:
-      "https://images.unsplash.com/photo-1537996194471-cc057b964117?w=1200&q=80",
-    alt: "Rizières en terrasses à Bali",
+      "https://images.unsplash.com/photo-1680100595862-9c8803a9e7da?auto=format&fit=crop&w=1200&q=80",
+    alt: "Rizières en terrasses de Tegallalang à Bali",
   },
 ];
 
