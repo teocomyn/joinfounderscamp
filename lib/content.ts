@@ -223,7 +223,7 @@ export const FAQ = [
   },
   {
     q: "Je dois rester toute la durée du camp ?",
-    a: "Oui. Le groupe vit ensemble du premier au dernier jour. C'est ce qui crée la dynamique.",
+    a: "Non, on est flexibles : tu peux partir quelques jours si tu as un impératif. En revanche, on demande un minimum de 10 jours sur 14 pour que le groupe prenne et que tu profites vraiment de la dynamique.",
   },
   {
     q: "La connexion internet est vraiment fiable ?",
