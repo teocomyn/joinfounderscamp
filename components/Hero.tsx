@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HERO_IMAGE, SITE } from "@/lib/content";
 
 const HERO_CHIPS = [
@@ -56,11 +57,13 @@ export default function Hero() {
           <div className="hero-photo-stack">
             <div className="hero-photo-ring" aria-hidden="true" />
             <div className="hero-frame hero-frame--square">
-              <img
+              <Image
                 className="hero-photo"
                 src={HERO_IMAGE}
                 alt="Fondateurs au travail avec vue sur la ville"
-                fetchPriority="high"
+                fill
+                priority
+                sizes="(max-width: 560px) 100vw, (max-width: 960px) 400px, 480px"
               />
               <div className="hero-frame-scrim" aria-hidden="true" />
               <div className="hero-float hero-float--session">

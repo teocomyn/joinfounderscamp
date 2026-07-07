@@ -16,6 +16,7 @@ export default function Pillars() {
         alt=""
         fill
         sizes="(max-width: 1180px) 100vw, 1180px"
+        quality={75}
         className="bento-stage-bg"
       />
       <div className="bento-stage-scrim" aria-hidden="true" />

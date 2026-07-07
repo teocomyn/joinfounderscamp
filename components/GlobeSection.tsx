@@ -27,7 +27,7 @@ export default function GlobeSection() {
     <section id="globe" className="section section-globe">
       <div className="wrap section-globe-inner">
         <div className="globe-intro">
-          <span className="pill-label pill-label--light">Carte mondiale</span>
+          <span className="pill-label">Carte mondiale</span>
           <h2>THE FOUNDERS CAMP · partout où tu dois être.</h2>
           <p>
             Work. Escape. Tribe. depuis Lisbonne, Gozo ou Bali. Fais pivoter le

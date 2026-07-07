@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { STATS_IMAGE } from "@/lib/content";
 
@@ -36,12 +37,12 @@ export default function StatsSection() {
 
         <Reveal className="stats-showcase-visual">
           <div className="stats-video-frame">
-            <img
-              className="stats-video-frame-el stats-photo"
+            <Image
+              className="stats-video-frame-el"
               src={STATS_IMAGE}
               alt="Dîner entre fondateurs en terrasse"
-              loading="lazy"
-              decoding="async"
+              fill
+              sizes="(max-width: 960px) 100vw, 480px"
             />
             <div className="stats-video-frame-glow" aria-hidden="true" />
           </div>

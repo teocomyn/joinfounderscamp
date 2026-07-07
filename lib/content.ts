@@ -6,15 +6,17 @@ export const SITE = {
   instagram: "https://instagram.com/joinfounderscamp",
 } as const;
 
-export const HERO_IMAGE = "/camp/hero-work.png";
+export const HERO_IMAGE = "/camp/hero-work.webp";
 
 export const HERO_VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260622_202655_a7f5aca0-2f80-4bc9-bcb5-96ac95662003.mp4";
 
-export const STATS_IMAGE = "/camp/stats-dinner.png";
+export const STATS_IMAGE = "/camp/stats-dinner.webp";
 
 export const STATS_VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260330_145725_08886141-ed95-4a8e-8d6d-b75eaadce638.mp4";
+
+export const FOOTER_IMAGE = "/camp/surf-cliffs.webp";
 
 export const FOOTER_VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_111347_9cf2a2b0-2c10-475b-a132-147a046b4927.mp4";
@@ -22,109 +24,108 @@ export const FOOTER_VIDEO =
 export const IMAGES = {
   heroPoster:
     "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=1200&q=80",
-  bentoBg:
-    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80",
-  founder: "/founder-teo.png",
-  founderLeopold: "/founder-leopold.png",
-  logo: "/logo-founders-camp-dark.png",
-  logoLight: "/logo-founders-camp-transparent.png",
+  bentoBg: "/camp/work-villa-pool.webp",
+  founder: "/founder-teo.webp",
+  founderLeopold: "/founder-leopold.webp",
+  logo: "/logo-founders-camp-dark.webp",
+  logoLight: "/logo-founders-camp-transparent.webp",
   lisbon:
-    "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=900&q=75",
   gozo:
-    "https://images.unsplash.com/photo-1668647184912-67da07256e3e?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1668647184912-67da07256e3e?auto=format&fit=crop&w=900&q=75",
   bali:
-    "https://images.unsplash.com/photo-1680100595862-9c8803a9e7da?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1680100595862-9c8803a9e7da?auto=format&fit=crop&w=900&q=75",
 } as const;
 
 export const CAMP_MOMENTS = [
   {
     label: "Work",
     caption: "Deep work · vue ville",
-    image: "/camp/work-city.png",
+    image: "/camp/work-city.webp",
     alt: "Fondateurs au travail avec vue sur la ville",
   },
   {
     label: "Work",
     caption: "Cowork · jungle",
-    image: "/camp/work-jungle.png",
+    image: "/camp/work-jungle.webp",
     alt: "Laptop face à la jungle tropicale",
   },
   {
     label: "Work",
     caption: "Villa · piscine · Bali",
-    image: "/camp/work-pool-bali.png",
+    image: "/camp/work-pool-bali.webp",
     alt: "Travail depuis une villa avec piscine à Bali",
   },
   {
     label: "Work",
     caption: "Forêt · focus total",
-    image: "/camp/work-forest.png",
+    image: "/camp/work-forest.webp",
     alt: "Session de travail avec vue forêt",
   },
   {
     label: "Work",
     caption: "Terrasse · océan",
-    image: "/camp/work-terrace.png",
+    image: "/camp/work-terrace.webp",
     alt: "Travail en terrasse face à la piscine et l'océan",
   },
   {
     label: "Work",
     caption: "Villa · pool · groupe",
-    image: "/camp/work-villa-pool.png",
+    image: "/camp/work-villa-pool.webp",
     alt: "Groupe de fondateurs qui travaillent en villa",
   },
   {
     label: "Sport",
     caption: "Salle · vue tropicale",
-    image: "/camp/gym-view.png",
+    image: "/camp/gym-view.webp",
     alt: "Salle de sport avec vue sur la végétation",
   },
   {
     label: "Sport",
     caption: "Running · tropiques",
-    image: "/camp/run-tropical.png",
+    image: "/camp/run-tropical.webp",
     alt: "Course à pied entre les palmiers",
   },
   {
     label: "Sport",
     caption: "Running · groupe",
-    image: "/camp/run-group.png",
+    image: "/camp/run-group.webp",
     alt: "Groupe qui court ensemble en ville",
   },
   {
     label: "Tribu",
     caption: "Dîner · terrasse",
-    image: "/camp/dinner.png",
+    image: "/camp/dinner.webp",
     alt: "Dîner entre fondateurs en terrasse",
   },
   {
     label: "Escape",
     caption: "Plongée · prépa",
-    image: "/camp/dive-boat.png",
+    image: "/camp/dive-boat.webp",
     alt: "Préparation plongée depuis un bateau",
   },
   {
     label: "Escape",
     caption: "Plongée · plage",
-    image: "/camp/dive-walk.png",
+    image: "/camp/dive-walk.webp",
     alt: "Marche vers la plage avec le matériel de plongée",
   },
   {
     label: "Escape",
     caption: "Surf · falaises",
-    image: "/camp/surf-cliffs.png",
+    image: "/camp/surf-cliffs.webp",
     alt: "Session surf entre les falaises",
   },
   {
     label: "Escape",
     caption: "Voilier · saut",
-    image: "/camp/sailboat-jump.png",
+    image: "/camp/sailboat-jump.webp",
     alt: "Saut depuis un voilier dans l'eau turquoise",
   },
   {
     label: "Escape",
     caption: "Scooter · Bali",
-    image: "/camp/scooter.png",
+    image: "/camp/scooter.webp",
     alt: "Exploration en scooter dans la jungle",
   },
 ] as const;

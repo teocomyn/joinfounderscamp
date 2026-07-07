@@ -2,14 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
     ],
-    // Évite les 404 de /_next/image en prod Vercel : URLs Unsplash servies directement
-    unoptimized: true,
   },
 };
 

@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
 import BrandLogo from "@/components/BrandLogo";
-import FitnessButton from "@/components/footer/FitnessButton";
-import { FOOTER_VIDEO, FOUNDERS, SITE } from "@/lib/content";
+import { FOOTER_IMAGE, FOUNDERS, SITE } from "@/lib/content";
 
 const NAV_LINKS = [
   { label: "Concept", href: "#concept" },
@@ -22,26 +20,18 @@ const CONNECT_LINKS = [
 export default function FooterSection() {
   return (
     <section className="footer-stage" aria-label="Pied de page">
-      <video
-        className="footer-stage-video"
-        autoPlay
-        muted
-        loop
-        playsInline
+      <Image
+        className="footer-stage-photo"
+        src={FOOTER_IMAGE}
+        alt=""
+        fill
+        sizes="100vw"
         aria-hidden="true"
-      >
-        <source src={FOOTER_VIDEO} type="video/mp4" />
-      </video>
+      />
       <div className="footer-stage-scrim" aria-hidden="true" />
 
       <div className="footer-stage-inner">
-        <motion.footer
-          className="footer-glass"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        <footer className="footer-glass">
           <div className="footer-founders">
             {FOUNDERS.map((f) => (
               <div key={f.name} className="footer-founder">
@@ -50,7 +40,7 @@ export default function FooterSection() {
                     src={f.image}
                     alt={f.name}
                     fill
-                    sizes="72px"
+                    sizes="80px"
                     className="footer-founder-img"
                   />
                 </div>
@@ -79,20 +69,12 @@ export default function FooterSection() {
             <h2 className="footer-heading">Work. Escape. Tribe.</h2>
 
             <div className="footer-actions">
-              <FitnessButton
-                href="#candidature"
-                variant="primary"
-                className="fitness-btn--compact"
-              >
+              <a href="#candidature" className="fitness-btn fitness-btn--primary fitness-btn--compact">
                 Candidater
-              </FitnessButton>
-              <FitnessButton
-                href="#concept"
-                variant="secondary"
-                className="fitness-btn--compact"
-              >
+              </a>
+              <a href="#concept" className="fitness-btn fitness-btn--secondary fitness-btn--compact">
                 Découvrir le camp
-              </FitnessButton>
+              </a>
             </div>
 
             <nav className="footer-menu" aria-label="Navigation">
@@ -125,7 +107,7 @@ export default function FooterSection() {
             <span>© The Founders Camp 2027</span>
             <span>joinfounderscamp.com</span>
           </div>
-        </motion.footer>
+        </footer>
       </div>
     </section>
   );

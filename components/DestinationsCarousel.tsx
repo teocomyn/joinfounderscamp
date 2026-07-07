@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { Check } from "lucide-react";
 import { DESTINATIONS } from "@/lib/content";
@@ -44,7 +45,13 @@ export default function DestinationsCarousel() {
             className={`dest${d.open ? " dest--open" : ""}${d.featured ? " dest--featured" : ""}`}
           >
             <div className="dest-media">
-              <img src={d.image} alt={d.alt} className="dest-img" loading="lazy" />
+              <Image
+                src={d.image}
+                alt={d.alt}
+                fill
+                sizes="(max-width: 960px) 85vw, 460px"
+                className="dest-img"
+              />
               <div className="dest-media-scrim" aria-hidden="true" />
               <span className={`tag${d.open ? " open" : ""}`}>{d.tag}</span>
             </div>

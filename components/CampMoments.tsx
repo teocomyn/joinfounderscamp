@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { CAMP_MOMENTS } from "@/lib/content";
 
@@ -18,7 +19,13 @@ export default function CampMoments() {
           {CAMP_MOMENTS.map((m) => (
             <figure key={m.image} className="moment-card">
               <div className="moment-media">
-                <img src={m.image} alt={m.alt} loading="lazy" decoding="async" />
+                <Image
+                  src={m.image}
+                  alt={m.alt}
+                  fill
+                  sizes="(max-width: 680px) 50vw, (max-width: 1200px) 33vw, 20vw"
+                  className="moment-img"
+                />
               </div>
               <figcaption className="moment-caption">
                 <span>{m.caption}</span>

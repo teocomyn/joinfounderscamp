@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <main id="main-content">
       <Hero />
 
       <section id="concept" className="section section-bento">
@@ -61,6 +62,7 @@ export default function Home() {
       <ApplySection />
 
       <FooterSection />
+      </main>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { fredoka, ibmPlexMono } from "@/lib/fonts";
 import "./globals.css";
 
 const OG_IMAGE = "https://joinfounderscamp.com/logo-founders-camp-dark.png";
@@ -41,16 +42,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={GeistSans.variable}>
+    <html
+      lang="fr"
+      className={`${GeistSans.variable} ${fredoka.variable} ${ibmPlexMono.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fredoka:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="image"
+          href="/camp/hero-work.webp"
+          type="image/webp"
+          fetchPriority="high"
         />
       </head>
-      <body>{children}</body>
+      <body className={GeistSans.className}>{children}</body>
     </html>
   );
 }
