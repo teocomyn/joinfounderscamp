@@ -35,6 +35,7 @@ body {
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 ::selection { background: var(--copper); color: var(--cream); }
@@ -611,6 +612,18 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  .moments-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .moments-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 680px) {
+  .moments-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 
 .moment-card {
@@ -1661,8 +1674,9 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   }
 
   .stats-video-frame {
-    max-width: 100%;
-    aspect-ratio: 16 / 10;
+    max-width: min(100%, 480px);
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -2424,8 +2438,6 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 
   .section-selection .criteria { grid-template-columns: 1fr; }
 
-  .moments-grid { grid-template-columns: repeat(3, 1fr); }
-
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
   .stat-divider { display: none; }
   .stat-item:nth-child(3),
@@ -2446,7 +2458,18 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 
 @media (max-width: 560px) {
   .wrap { padding: 0 20px; }
+  .hero { padding-top: 96px; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .hero-ctas .btn { justify-content: center; }
-  .moments-grid { grid-template-columns: 1fr; }
+  .hero-float { padding: 10px 12px; border-radius: 12px; }
+  .hero-float strong { font-size: 15px; }
+  .hero-float--spots strong { font-size: 22px; }
+  .hero-chips li { font-size: 10px; padding: 8px 12px; }
+  .logo-img { height: 48px; }
+  .site-nav--scrolled .logo-img { height: 42px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-glass { padding: 20px; border-radius: 24px; }
+  .section { padding: 72px 0; }
+  .moment-caption { padding: 10px 12px 12px; }
+  .moment-caption strong { font-size: 14px; }
 }
