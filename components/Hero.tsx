@@ -1,4 +1,4 @@
-import { HERO_VIDEO, IMAGES, SITE } from "@/lib/content";
+import { HERO_VIDEO, SITE } from "@/lib/content";
 
 export default function Hero() {
   return (
@@ -36,8 +36,7 @@ export default function Hero() {
               muted
               loop
               playsInline
-              preload="metadata"
-              poster={IMAGES.heroPoster}
+              preload="auto"
               aria-label="Aperçu d'une session Founders Camp"
             >
               <source src={HERO_VIDEO} type="video/mp4" />
