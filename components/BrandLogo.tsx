@@ -3,12 +3,20 @@ import { IMAGES } from "@/lib/content";
 type BrandLogoProps = {
   className?: string;
   priority?: boolean;
+  /** dark = logo noir (fonds clairs) · light = logo blanc (fonds sombres) */
+  variant?: "dark" | "light";
 };
 
-export default function BrandLogo({ className = "", priority = false }: BrandLogoProps) {
+export default function BrandLogo({
+  className = "",
+  priority = false,
+  variant = "dark",
+}: BrandLogoProps) {
+  const src = variant === "light" ? IMAGES.logoLight : IMAGES.logo;
+
   return (
     <img
-      src={IMAGES.logo}
+      src={src}
       alt="The Founders Camp"
       className={className}
       width={1024}

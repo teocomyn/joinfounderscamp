@@ -79,7 +79,7 @@ export default function Nav() {
           ×
         </button>
         <nav className="nav-overlay-nav" aria-label="Navigation mobile">
-          <BrandLogo className="nav-overlay-logo" priority />
+          <BrandLogo className="nav-overlay-logo" variant="light" priority />
           {LINKS.map((l) => (
             <a key={l.href} href={l.href} onClick={closeMenu}>
               {l.label}

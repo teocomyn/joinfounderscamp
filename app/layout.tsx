@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
-const OG_IMAGE = "https://joinfounderscamp.com/logo-founders-camp.png";
+const OG_IMAGE = "https://joinfounderscamp.com/logo-founders-camp-dark.png";
 
 export const metadata: Metadata = {
   title: "The Founders Camp · Workations privées pour entrepreneurs",
