@@ -1,4 +1,4 @@
-import { HERO_VIDEO, SITE } from "@/lib/content";
+import { HERO_IMAGE, SITE } from "@/lib/content";
 
 export default function Hero() {
   return (
@@ -30,17 +30,12 @@ export default function Hero() {
 
         <div className="hero-visual">
           <div className="hero-frame">
-            <video
-              className="hero-video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              aria-label="Aperçu d'une session Founders Camp"
-            >
-              <source src={HERO_VIDEO} type="video/mp4" />
-            </video>
+            <img
+              className="hero-photo"
+              src={HERO_IMAGE}
+              alt="Fondateurs au travail avec vue sur la ville"
+              fetchPriority="high"
+            />
             <div className="hero-frame-glow" aria-hidden="true" />
           </div>
         </div>
