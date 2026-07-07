@@ -20,8 +20,8 @@ export default function StatsSection() {
             <span className="accent">les fondateurs qui performent.</span>
           </h2>
           <p className="stats-showcase-lead">
-            Des villas aux quatre coins du monde, entrepreneurs à 10k€+/mois,
-            entourés de gens plus forts qu&apos;eux. Work, explore, build.
+            Fondateurs e-com, SaaS et agences à 10k€+/mois, dans des villas aux
+            quatre coins du monde. Work, explore, build.
           </p>
 
           <div className="stats-cards">

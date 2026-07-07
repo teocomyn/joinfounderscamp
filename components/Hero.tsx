@@ -10,12 +10,12 @@ export default function Hero() {
             Work. Escape. <span className="accent">Tribe.</span>
           </p>
           <p className="hero-meta">
-            2 semaines · 8 fondateurs · 10k€+/mois · {SITE.sessionShort}
+            2 semaines · 8 fondateurs · 10k€+/mois · e-com &amp; digital
           </p>
           <p className="hero-sub">
-            Le camp que tu aurais dû rejoindre il y a 2 ans : deep work, sport et
-            aventure depuis les plus beaux spots du monde, entouré de gens plus
-            forts que toi.
+            Workations privées pour fondateurs e-com, SaaS et agences. Deep work le
+            matin, sport l&apos;après-midi, mastermind le soir, entouré de gens
+            plus forts que toi.
           </p>
           <div className="hero-ctas">
             <a href="#candidature" className="btn btn-dark">

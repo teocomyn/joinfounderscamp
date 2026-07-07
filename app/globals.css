@@ -11,8 +11,9 @@
   --text: #1a1a18;
   --text-muted: #5c5a54;
   --sage: #7e9184;
-  --copper: #c56a3e;
-  --copper-soft: #d98a5f;
+  --copper: #e06f35;
+  --copper-soft: #f28a48;
+  --copper-bright: #ffbd78;
   --line-dark: rgba(234, 227, 210, 0.14);
   --line-light: rgba(26, 26, 24, 0.1);
   --radius: 20px;
@@ -64,9 +65,9 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 22px;
 }
 .pill-label--light {
-  color: var(--copper-soft);
-  background: rgba(217, 138, 95, 0.12);
-  border-color: rgba(217, 138, 95, 0.28);
+  color: var(--copper-bright);
+  background: rgba(255, 189, 120, 0.14);
+  border-color: rgba(255, 189, 120, 0.38);
 }
 
 /* ---------- BUTTONS ---------- */
@@ -434,7 +435,75 @@ a { color: inherit; text-decoration: none; }
 .sec-head--center p { margin-left: auto; margin-right: auto; }
 
 .section-dark .sec-head p,
-.section-cta .sec-head p { color: var(--sand-dim); }
+.section-cta .sec-head p { color: rgba(234, 227, 210, 0.72); }
+
+.section-dark .accent,
+.section-cta .accent {
+  color: var(--copper-bright);
+}
+
+/* ---------- CAMP MOMENTS ---------- */
+.section-moments {
+  background: var(--cream);
+  padding-top: 80px;
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.moment-card {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line-light);
+  box-shadow: var(--shadow-soft);
+}
+
+.moment-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--pine-soft);
+}
+
+.moment-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.moment-card:hover .moment-media img {
+  transform: scale(1.04);
+}
+
+.moment-caption {
+  padding: 16px 18px 18px;
+}
+
+.moment-caption span {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 6px;
+}
+
+.moment-caption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--pine-deep);
+  letter-spacing: -0.02em;
+}
 
 /* ---------- BENTO (glass cards) ---------- */
 .section-bento {
@@ -731,8 +800,8 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(8px);
 }
 .dest-media .tag.open {
-  border-color: rgba(197, 106, 62, 0.55);
-  color: var(--copper-soft);
+  border-color: rgba(255, 189, 120, 0.55);
+  color: var(--copper-bright);
 }
 
 .dest-body { padding: 24px 26px 28px; }
@@ -767,7 +836,7 @@ a { color: inherit; text-decoration: none; }
 .dest-perk-icon {
   width: 14px;
   height: 14px;
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   flex-shrink: 0;
 }
 
@@ -778,7 +847,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   transition: color 0.2s;
 }
 
@@ -873,7 +942,7 @@ a { color: inherit; text-decoration: none; }
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   letter-spacing: 0.06em;
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   padding-top: 2px;
 }
 .crit p { font-size: 15px; color: var(--sand-dim); line-height: 1.55; }
@@ -950,7 +1019,7 @@ a { color: inherit; text-decoration: none; }
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   background: rgba(197, 106, 62, 0.15);
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   border: 1px solid rgba(197, 106, 62, 0.3);
 }
 
@@ -984,7 +1053,7 @@ a { color: inherit; text-decoration: none; }
 
 .apply-faq-item summary::after {
   content: "+";
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   font-size: 18px;
 }
 
@@ -1729,7 +1798,7 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 }
 
 .glow-title-tag span {
-  color: var(--copper-soft);
+  color: var(--copper-bright);
 }
 
 .glow-horizon-overlay {
@@ -1761,7 +1830,7 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--copper-soft);
+  color: var(--copper-bright);
   background: rgba(197, 106, 62, 0.12);
   border: 1px solid rgba(217, 138, 95, 0.28);
   padding: 8px 14px;
@@ -1772,7 +1841,7 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 .glow-horizon-pill-icon {
   width: 14px;
   height: 14px;
-  color: var(--copper-soft);
+  color: var(--copper-bright);
 }
 
 .glow-horizon-lead {
@@ -1804,7 +1873,7 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 }
 
 .glow-horizon-link:hover {
-  color: var(--copper-soft);
+  color: var(--copper-bright);
 }
 
 .glow-horizon-scrim {
@@ -2193,6 +2262,8 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 
   .section-selection .criteria { grid-template-columns: 1fr; }
 
+  .moments-grid { grid-template-columns: repeat(2, 1fr); }
+
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
   .stat-divider { display: none; }
   .stat-item:nth-child(3),
@@ -2215,4 +2286,5 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   .wrap { padding: 0 20px; }
   .hero-ctas { flex-direction: column; align-items: stretch; }
   .hero-ctas .btn { justify-content: center; }
+  .moments-grid { grid-template-columns: 1fr; }
 }

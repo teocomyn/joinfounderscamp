@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import Pillars from "@/components/Pillars";
+import CampMoments from "@/components/CampMoments";
 import DestinationsCarousel from "@/components/DestinationsCarousel";
 import GlobeSection from "@/components/GlobeSection";
 import StatsSection from "@/components/stats/StatsSection";
@@ -32,6 +33,8 @@ export default function Home() {
           <Pillars />
         </div>
       </section>
+
+      <CampMoments />
 
       <section id="destinations" className="section section-dark">
         <div className="wrap">

@@ -32,6 +32,37 @@ export const IMAGES = {
     "https://images.unsplash.com/photo-1680100595862-9c8803a9e7da?auto=format&fit=crop&w=1200&q=80",
 } as const;
 
+export const CAMP_MOMENTS = [
+  {
+    label: "Deep work",
+    caption: "Matin · fibre testée · vue dégagée",
+    image:
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
+    alt: "Espace de travail lumineux avec grande baie vitrée",
+  },
+  {
+    label: "Sport",
+    caption: "Après-midi · salle privée ou extérieur",
+    image:
+      "https://images.unsplash.com/photo-1571902940642-07b473760286?auto=format&fit=crop&w=900&q=80",
+    alt: "Salle de sport moderne avec équipements",
+  },
+  {
+    label: "Tribu",
+    caption: "Soir · dîner · mastermind autour de la table",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
+    alt: "Table de restaurant en terrasse au coucher du soleil",
+  },
+  {
+    label: "Aventure",
+    caption: "Week-end · plongée · rando · surf",
+    image:
+      "https://images.unsplash.com/photo-1544551763-77af1757b527?auto=format&fit=crop&w=900&q=80",
+    alt: "Plongée sous-marine dans l'eau turquoise",
+  },
+] as const;
+
 export const PILLARS = [
   {
     label: "Work",
@@ -95,7 +126,7 @@ export const DESTINATIONS = [
 export const CRITERIA = [
   {
     num: "01",
-    text: "Tu génères au moins 10 000€ de CA mensuel avec ton activité.",
+    text: "Tu génères au moins 10 000€/mois avec ton activité (e-com, SaaS, agence ou activité digitale).",
   },
   {
     num: "02",
