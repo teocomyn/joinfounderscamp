@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import { HERO_VIDEO } from "@/lib/content";
+import { STATS_VIDEO } from "@/lib/content";
 
 const STATS = [
   { value: "8–10", label: "Places par session" },
@@ -45,7 +45,7 @@ export default function StatsSection() {
               className="stats-video-frame-el"
               aria-label="Aperçu session Founders Camp"
             >
-              <source src={HERO_VIDEO} type="video/mp4" />
+              <source src={STATS_VIDEO} type="video/mp4" />
             </video>
             <div className="stats-video-frame-glow" aria-hidden="true" />
           </div>
