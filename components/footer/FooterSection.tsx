@@ -63,7 +63,7 @@ export default function FooterSection() {
 
           <div className="footer-grid">
             <div className="footer-logo-cell">
-              <BrandLogo className="footer-brand-logo" />
+              <BrandLogo className="footer-brand-logo" variant="light" />
             </div>
 
             <h2 className="footer-heading">Work. Escape. Tribe.</h2>

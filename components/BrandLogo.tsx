@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { IMAGES } from "@/lib/content";
 
 type BrandLogoProps = {
@@ -16,14 +15,15 @@ export default function BrandLogo({
   const src = variant === "light" ? IMAGES.logoLight : IMAGES.logo;
 
   return (
-    <Image
+    <img
       src={src}
       alt="The Founders Camp"
       className={className}
-      width={360}
-      height={206}
-      sizes="(max-width: 960px) 140px, 172px"
-      priority={priority}
+      width={1024}
+      height={585}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      fetchPriority={priority ? "high" : "auto"}
     />
   );
 }

@@ -30,8 +30,8 @@ export const IMAGES = {
   bentoBg: "/camp/work-villa-pool.webp",
   founder: "/founder-teo.webp",
   founderLeopold: "/founder-leopold.webp",
-  logo: "/logo-founders-camp-dark.webp",
-  logoLight: "/logo-founders-camp-transparent.webp",
+  logo: "/logo-founders-camp-dark.png",
+  logoLight: "/logo-founders-camp-transparent.png",
   lisbon:
     "https://images.unsplash.com/photo-1711125174987-645d1a9d6466?auto=format&fit=crop&w=900&q=75",
   gozo:
