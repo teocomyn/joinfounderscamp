@@ -4,6 +4,9 @@ export const SITE = {
   email: "hello@joinfounderscamp.com",
   linkedin: "https://linkedin.com/in/teocomyn",
   instagram: "https://instagram.com/joinfounderscamp",
+  calendly:
+    process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/teocomyn",
+  priceFrom: "4 900€",
 } as const;
 
 export const HERO_IMAGE = "/camp/hero-work.webp";
@@ -212,7 +215,7 @@ export const CRITERIA = [
 export const FAQ = [
   {
     q: "Combien ça coûte ?",
-    a: "Le montant exact est communiqué lors de l'appel de sélection. Il couvre logement, organisation, activités et accès au cercle.",
+    a: `À partir de ${SITE.priceFrom} tout compris pour 2 semaines (logement, organisation, activités). Le montant exact est confirmé lors de l'appel de sélection selon la session et la chambre.`,
   },
   {
     q: "Je fais moins de 10k€/mois, je peux candidater ?",

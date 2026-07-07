@@ -13,8 +13,8 @@ export default function ApplySection() {
             </span>
             <h2>Réserve ta place au camp.</h2>
             <p>
-              5 minutes pour candidater. On revient vers toi sous 72h. Si ton profil
-              matche, on t&apos;appelle pour un échange rapide.
+              5 minutes pour candidater. On revient vers toi sous 72h. À partir de{" "}
+              {SITE.priceFrom} tout compris · appel de 20 min si ton profil matche.
             </p>
 
             <ol className="apply-steps">

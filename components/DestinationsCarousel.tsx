@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { Check } from "lucide-react";
+import WaitlistForm from "@/components/WaitlistForm";
 import { DESTINATIONS } from "@/lib/content";
 
 export default function DestinationsCarousel() {
@@ -67,11 +68,7 @@ export default function DestinationsCarousel() {
                   </li>
                 ))}
               </ul>
-              {!d.open && (
-                <a href="#candidature" className="dest-waitlist">
-                  Rejoindre la liste d&apos;attente →
-                </a>
-              )}
+              {!d.open && <WaitlistForm destination={d.name.split(",")[0]} />}
             </div>
           </article>
         ))}

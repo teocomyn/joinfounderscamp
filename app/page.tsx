@@ -9,6 +9,7 @@ import StatsSection from "@/components/stats/StatsSection";
 import SelectionSection from "@/components/SelectionSection";
 import ApplySection from "@/components/ApplySection";
 import FooterSection from "@/components/footer/FooterSection";
+import StickyApplyCta from "@/components/StickyApplyCta";
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
 
       <FooterSection />
       </main>
+      <StickyApplyCta />
     </>
   );
 }
