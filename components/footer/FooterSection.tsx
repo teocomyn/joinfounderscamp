@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import BrandLogo from "@/components/BrandLogo";
 import FitnessButton from "@/components/footer/FitnessButton";
-import { FOOTER_VIDEO, FOUNDER, SITE } from "@/lib/content";
+import { FOOTER_VIDEO, FOUNDERS, SITE } from "@/lib/content";
 
 const NAV_LINKS = [
   { label: "Concept", href: "#concept" },
@@ -42,29 +42,33 @@ export default function FooterSection() {
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className="footer-founder">
-            <div className="footer-founder-media">
-              <Image
-                src={FOUNDER.image}
-                alt={FOUNDER.name}
-                fill
-                sizes="80px"
-                className="footer-founder-img"
-              />
-            </div>
-            <div className="footer-founder-copy">
-              <strong>{FOUNDER.name}</strong>
-              <span>{FOUNDER.title}</span>
-              <p>{FOUNDER.bio}</p>
-              <a
-                href={FOUNDER.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-founder-link"
-              >
-                LinkedIn →
-              </a>
-            </div>
+          <div className="footer-founders">
+            {FOUNDERS.map((f) => (
+              <div key={f.name} className="footer-founder">
+                <div className="footer-founder-media">
+                  <Image
+                    src={f.image}
+                    alt={f.name}
+                    fill
+                    sizes="72px"
+                    className="footer-founder-img"
+                  />
+                </div>
+                <div className="footer-founder-copy">
+                  <strong>{f.name}</strong>
+                  <span>{f.title}</span>
+                  <p>{f.bio}</p>
+                  <a
+                    href={f.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-founder-link"
+                  >
+                    LinkedIn →
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="footer-grid">

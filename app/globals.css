@@ -158,8 +158,12 @@ a { color: inherit; text-decoration: none; }
 
 .logo-img {
   display: block;
-  height: 36px;
+  height: 72px;
   width: auto;
+}
+
+.site-nav--scrolled .logo-img {
+  height: 56px;
 }
 
 .nav-pill {
@@ -272,7 +276,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-overlay-logo {
   display: block;
-  height: 52px;
+  height: 80px;
   width: auto;
   margin-bottom: 12px;
 }
@@ -1885,12 +1889,20 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   gap: 24px;
 }
 
+.footer-founders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(6, 6, 6, 0.08);
+}
+
 .footer-founder {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(6, 6, 6, 0.08);
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .footer-founder-media {
@@ -2155,6 +2167,8 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 960px) {
   .nav-shell { grid-template-columns: 1fr auto; }
+  .logo-img { height: 56px; }
+  .site-nav--scrolled .logo-img { height: 48px; }
   .nav-pill { display: none; }
   .nav-burger { display: flex; }
   .nav-actions .btn-nav { display: none; }
@@ -2192,6 +2206,7 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   }
   .split-block { gap: 40px; }
   .foot-grid { grid-template-columns: 1fr; }
+  .footer-founders { grid-template-columns: 1fr; gap: 20px; }
   .section { padding: 88px 0; }
   .apply-card .field-row { grid-template-columns: 1fr; }
 }

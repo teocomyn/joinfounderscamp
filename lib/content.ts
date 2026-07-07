@@ -18,6 +18,7 @@ export const IMAGES = {
   bentoBg:
     "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80",
   founder: "/founder-teo.png",
+  founderLeopold: "/founder-leopold.png",
   logo: "/logo-founders-camp-dark.png",
   logoLight: "/logo-founders-camp-transparent.png",
   lisbon:
@@ -133,10 +134,19 @@ export const APPLY_STEPS = [
   { num: "04", label: "Confirmation place" },
 ] as const;
 
-export const FOUNDER = {
-  name: "Teo Comyn",
-  title: "Fondateur · The Founders Camp",
-  bio: "Entrepreneur et organisateur de sessions privées pour fondateurs qui performent. Chaque camp est construit à la main : villa testée, fibre vérifiée, groupe calibré.",
-  linkedin: SITE.linkedin,
-  image: IMAGES.founder,
-} as const;
+export const FOUNDERS = [
+  {
+    name: "Teo Comyn",
+    title: "Co-fondateur · The Founders Camp",
+    bio: "Expert Shopify · CRO & SEO · +60 marques. Co-organise chaque session.",
+    linkedin: "https://linkedin.com/in/teocomyn",
+    image: IMAGES.founder,
+  },
+  {
+    name: "Léopold De Wulf",
+    title: "Co-fondateur · The Founders Camp",
+    bio: "Fondateur Clickroad · SEO Shopify. Co-organise chaque session.",
+    linkedin: "https://linkedin.com/in/leopold-de-wulf",
+    image: IMAGES.founderLeopold,
+  },
+] as const;
