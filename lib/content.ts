@@ -34,32 +34,94 @@ export const IMAGES = {
 
 export const CAMP_MOMENTS = [
   {
-    label: "Deep work",
-    caption: "Matin · fibre testée · vue dégagée",
-    image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
-    alt: "Espace de travail lumineux avec grande baie vitrée",
+    label: "Work",
+    caption: "Deep work · vue ville",
+    image: "/camp/work-city.png",
+    alt: "Fondateurs au travail avec vue sur la ville",
+  },
+  {
+    label: "Work",
+    caption: "Cowork · jungle",
+    image: "/camp/work-jungle.png",
+    alt: "Laptop face à la jungle tropicale",
+  },
+  {
+    label: "Work",
+    caption: "Villa · piscine · Bali",
+    image: "/camp/work-pool-bali.png",
+    alt: "Travail depuis une villa avec piscine à Bali",
+  },
+  {
+    label: "Work",
+    caption: "Forêt · focus total",
+    image: "/camp/work-forest.png",
+    alt: "Session de travail avec vue forêt",
+  },
+  {
+    label: "Work",
+    caption: "Terrasse · océan",
+    image: "/camp/work-terrace.png",
+    alt: "Travail en terrasse face à la piscine et l'océan",
+  },
+  {
+    label: "Work",
+    caption: "Villa · pool · groupe",
+    image: "/camp/work-villa-pool.png",
+    alt: "Groupe de fondateurs qui travaillent en villa",
   },
   {
     label: "Sport",
-    caption: "Après-midi · salle privée ou extérieur",
-    image:
-      "https://images.unsplash.com/photo-1571902940642-07b473760286?auto=format&fit=crop&w=900&q=80",
-    alt: "Salle de sport moderne avec équipements",
+    caption: "Salle · vue tropicale",
+    image: "/camp/gym-view.png",
+    alt: "Salle de sport avec vue sur la végétation",
+  },
+  {
+    label: "Sport",
+    caption: "Running · tropiques",
+    image: "/camp/run-tropical.png",
+    alt: "Course à pied entre les palmiers",
+  },
+  {
+    label: "Sport",
+    caption: "Running · groupe",
+    image: "/camp/run-group.png",
+    alt: "Groupe qui court ensemble en ville",
   },
   {
     label: "Tribu",
-    caption: "Soir · dîner · mastermind autour de la table",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
-    alt: "Table de restaurant en terrasse au coucher du soleil",
+    caption: "Dîner · terrasse",
+    image: "/camp/dinner.png",
+    alt: "Dîner entre fondateurs en terrasse",
   },
   {
-    label: "Aventure",
-    caption: "Week-end · plongée · rando · surf",
-    image:
-      "https://images.unsplash.com/photo-1544551763-77af1757b527?auto=format&fit=crop&w=900&q=80",
-    alt: "Plongée sous-marine dans l'eau turquoise",
+    label: "Escape",
+    caption: "Plongée · prépa",
+    image: "/camp/dive-boat.png",
+    alt: "Préparation plongée depuis un bateau",
+  },
+  {
+    label: "Escape",
+    caption: "Plongée · plage",
+    image: "/camp/dive-walk.png",
+    alt: "Marche vers la plage avec le matériel de plongée",
+  },
+  {
+    label: "Escape",
+    caption: "Surf · falaises",
+    image: "/camp/surf-cliffs.png",
+    alt: "Session surf entre les falaises",
+  },
+  {
+    label: "Escape",
+    caption: "Voilier · saut",
+    image: "/camp/sailboat-jump.png",
+    alt: "Saut depuis un voilier dans l'eau turquoise",
+  },
+  {
+    label: "Escape",
+    caption: "Scooter · Bali",
+    image: "/camp/scooter.png",
+    alt: "Exploration en scooter dans la jungle",
   },
 ] as const;
 

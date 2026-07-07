@@ -9,14 +9,14 @@ export default function CampMoments() {
           <span className="pill-label">Au camp</span>
           <h2 id="moments-heading">Pour te projeter, concrètement.</h2>
           <p>
-            Même rythme chaque jour : produire le matin, bouger l&apos;après-midi,
-            échanger le soir. Pas de stock photos : le format, c&apos;est ça.
+            Work le matin, sport l&apos;après-midi, tribu le soir. Le quotidien
+            au camp, en images.
           </p>
         </Reveal>
 
         <Reveal className="moments-grid reveal-stagger">
           {CAMP_MOMENTS.map((m) => (
-            <figure key={m.label} className="moment-card">
+            <figure key={m.image} className="moment-card">
               <div className="moment-media">
                 <img src={m.image} alt={m.alt} loading="lazy" decoding="async" />
               </div>
