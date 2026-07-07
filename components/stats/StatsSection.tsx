@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import { STATS_VIDEO } from "@/lib/content";
+import { STATS_IMAGE } from "@/lib/content";
 
 const STATS = [
   { value: "8–10", label: "Places par session" },
@@ -36,17 +36,13 @@ export default function StatsSection() {
 
         <Reveal className="stats-showcase-visual">
           <div className="stats-video-frame">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="stats-video-frame-el"
-              aria-label="Aperçu session Founders Camp"
-            >
-              <source src={STATS_VIDEO} type="video/mp4" />
-            </video>
+            <img
+              className="stats-video-frame-el stats-photo"
+              src={STATS_IMAGE}
+              alt="Dîner entre fondateurs en terrasse"
+              loading="lazy"
+              decoding="async"
+            />
             <div className="stats-video-frame-glow" aria-hidden="true" />
           </div>
         </Reveal>
