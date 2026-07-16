@@ -106,6 +106,16 @@ export default function FooterSection() {
           <div className="footer-legal">
             <span>© The Founders Camp 2027</span>
             <span>joinfounderscamp.com</span>
+            <span className="footer-credit">
+              Réalisé par{" "}
+              <a href="https://teocomyn.com/" className="footer-credit-link">
+                Teo Comyn
+              </a>
+              {" · "}
+              <a href="https://experaise.com/" className="footer-credit-link">
+                Experaise
+              </a>
+            </span>
           </div>
         </footer>
       </div>

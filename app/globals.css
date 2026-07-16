@@ -2408,6 +2408,22 @@ details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; max-wid
   text-transform: uppercase;
 }
 
+.footer-credit {
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.footer-credit-link {
+  color: rgba(6, 6, 6, 0.55);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer-credit-link:hover {
+  color: rgba(6, 6, 6, 0.85);
+}
+
 /* FitnessButton */
 .fitness-btn {
   display: inline-flex;
